@@ -17,3 +17,21 @@ A researcher wishing to reproduce this study from raw data must:
 - WP20112025: Search and select "The Washington Post" (ID = 10327) in Publication Titles and set Publication date between 01/01/2011 to 12/31/2025.
 - WashingtonPost-HistoricalNewspaper: Search and select "The Washington Post (1974-)" (ID = 47130) in Publication Titles and set Publication date between 01/01/1980 to 12/31/1986.
 4. Once the above data folders are transferred into your Jupyter Notebook, you can run the notebook files below to replicate the results.
+
+## Pipeline
+
+The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02.6` kernel). 
+Each stage reads files written by the previous one:
+
+| Order | Notebook | Purpose | Requires TDM Studio access? |
+|---|---|---|---|
+| 1 | `Dataset.ipynb` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
+| 2 | `Step1_Preprocessing.ipynb` | Filter to US articles, dedupe, tokenize, sample | Yes (consumes Step 1 output) |
+| 3 | `Step2_Topic_Models.ipynb` | LDA topic modeling; manual topic/term screening | Yes |
+| 4 | `Step3_ALC_Embedding.ipynb` | Core analysis: ALC embeddings, politicization scores, category-level regressions | Yes |
+| 5 | `Step4_Opinion_Mapping.ipynb` | Visualize opinion trends from Step 3 output | Runs on Step 3's derived output |
+| 6 | `Step5_Close_Reading.ipynb` | Per-topic/anchor-word embeddings for qualitative validity checks | Yes |
+| 7 | `Step6_Outlet_Analysis.ipynb` | Compare outlets and editorials vs. all articles | Runs on Steps 3 & 5 derived output |
+
+Steps marked "Yes" read raw or near-raw article text and can only be executed inside a TDM Studio enclave by a researcher with their own ProQuest access.
+Steps that consume only already-derived, non-consumptive outputs (aggregated scores, modelobjects with no raw text) can in principle run outside the enclave once those intermediate files are supplied.
