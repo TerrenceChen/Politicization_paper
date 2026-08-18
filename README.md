@@ -26,8 +26,8 @@ Each stage reads files written by the previous one:
 | Order | Notebook | Purpose | Requires TDM Studio access? |
 |---|---|---|---|
 | 1 | `Dataset.ipynb` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
-| 2 | `Step1_Preprocessing.ipynb` | Filter to US articles, dedupe, tokenize, sample | No (consumes Step 1 output) |
-| 3 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | LDA topic modeling; manual topic/term screening | Yes |
+| 2 | `Step1_Preprocessing.ipynb` | Filter to US articles, dedupe, tokenize, sample | Yes (consumes Step 1 output) |
+| 3 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | LDA topic modeling; manual topic/term screening | No |
 | 4 | `Step3_ALC_Embedding.ipynb` | Core analysis: ALC embeddings, politicization scores, category-level regressions | Yes |
 | 5 | `makeBaldGelData.R`, `Step4_Opinion_Mapping.ipynb` | Compare public opinion trends with politicization trends | No (Runs on Step 3's derived output) |
 | 6 | `Step5_Close_Reading.ipynb` | Per-topic/anchor-word embeddings for qualitative validity checks | Yes |
