@@ -31,11 +31,11 @@ Each stage reads files written by the previous one:
 |---|---|---|---|---|
 | 0 | `Dataset.ipynb` | `MainDictionary.txt` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
 | 1 | `Step1_Preprocessing.ipynb` | `non_us_country_adj.csv` | Filter to US articles, dedupe, tokenize, sample | Yes |
-| 2 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topics_screened.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
+| 2 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topics_screened_new.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
 | 3 | `Step3_ALC_Embedding.ipynb` | `glove.rds`, `khodakA.rds` |Core analysis: ALC embeddings, politicization scores, regressions, graphs | Yes |
 | 4 | `makeBaldGelData.R`, `Step4_Opinion_Mapping.ipynb` | `results_with_domains.rds` | Compare public opinion trends with politicization trends | No (can run with `results_df_label_combined.rds`) |
-| 5 | `Step5_Close_Reading.ipynb` | NA | Re-runs Step3's ALC embedding pipeline but saves the raw per-term DEMs | Yes |
-| 6 | `AppendixF_ALC_Dems_NewsOnly.ipynb`, `AppendixG_Outlet_Analysis.ipynb`, `AppendixJ_ALC_HighFreq.ipynb` | NA | Appendices — robustness checks on the Step 3 results: restricted to non-opinion articles (excludes Commentary/Editorial/Review types); re-derives scores separately per outlet (NYT/WP/WSJ); re-derives scores restricted to high-frequency terms (≥100 occurrences in a given year) | Yes |
+| 5 | `Step5_Close_Reading.ipynb` | `glove.rds`, `khodakA.rds` | Re-runs Step3's ALC embedding pipeline but saves the raw per-term DEMs | Yes |
+| 6 | `AppendixF_ALC_Dems_NewsOnly.ipynb`, `AppendixG_Outlet_Analysis.ipynb`, `AppendixJ_ALC_HighFreq.ipynb` | Step 5 results | Appendices — robustness checks on the Step 3 results: restricted to non-opinion articles (excludes Commentary/Editorial/Review types); re-derives scores separately per outlet (NYT/WP/WSJ); re-derives scores restricted to high-frequency terms (≥100 occurrences in a given year) | Yes |
 
 Steps marked "Yes" read raw or near-raw article text and can only be executed inside a TDM Studio enclave by a researcher with their own ProQuest access.
 Steps that consume only already-derived, non-consumptive outputs (aggregated scores, model objects with no raw text) can in principle run outside the enclave once those intermediate files are supplied.
