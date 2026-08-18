@@ -20,18 +20,18 @@ A researcher wishing to reproduce this study from raw data must:
 
 ## Pipeline
 
-The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02.6` kernel). 
+The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02.6` kernel). Some analysis requires externally imported files in the `input_files` folder.
 Each stage reads files written by the previous one:
 
-| Order | Code Files | Purpose | Requires TDM Studio access? |
+| Order | Code Files | Input Files | Purpose | Requires TDM Studio access? |
 |---|---|---|---|
-| 1 | `Dataset.ipynb` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
-| 2 | `Step1_Preprocessing.ipynb` | Filter to US articles, dedupe, tokenize, sample | Yes (consumes Step 1 output) |
-| 3 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | LDA topic modeling; manual topic/term screening | No |
-| 4 | `Step3_ALC_Embedding.ipynb` | Core analysis: ALC embeddings, politicization scores, regressions, graphs | Yes |
-| 5 | `makeBaldGelData.R`, `Step4_Opinion_Mapping.ipynb` | Compare public opinion trends with politicization trends | No (Runs on Step 3's derived output) |
-| 6 | `Step5_Close_Reading.ipynb` | Save word embeddings for each dictionary term | Yes |
-| 7 | `AppendixF_ALC_Dems_NewsOnly.ipynb`, `AppendixG_Outlet_Analysis.ipynb`, `AppendixJ_ALC_HighFreq.ipynb` | Appendices: Analysis excluding editorials and comments; separated by outlet; and limited to high frequency terms | Runs on Step 5 derived output |
+| 1 | `Dataset.ipynb` | `MainDictionary.txt` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
+| 2 | `Step1_Preprocessing.ipynb` | `non_us_country_adj.csv` | Filter to US articles, dedupe, tokenize, sample | Yes (consumes Step 1 output) |
+| 3 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topics_screened.csv` | LDA topic modeling; manual topic/term screening | No (Can run with the file `dfm_all_compressed_0412.rds` |
+| 4 | `Step3_ALC_Embedding.ipynb` | `glove.rds`, `khodakA.rds` |Core analysis: ALC embeddings, politicization scores, regressions, graphs | Yes |
+| 5 | `makeBaldGelData.R`, `Step4_Opinion_Mapping.ipynb` | `results_with_domains.rds` | Compare public opinion trends with politicization trends | No (Runs on Step 3's derived output) |
+| 6 | `Step5_Close_Reading.ipynb` | NA | Save word embeddings for each dictionary term | Yes |
+| 7 | `AppendixF_ALC_Dems_NewsOnly.ipynb`, `AppendixG_Outlet_Analysis.ipynb`, `AppendixJ_ALC_HighFreq.ipynb` | NA | Appendices: Analysis excluding editorials and comments; separated by outlet; and limited to high frequency terms | Runs on Step 5 derived output |
 
 Steps marked "Yes" read raw or near-raw article text and can only be executed inside a TDM Studio enclave by a researcher with their own ProQuest access.
 Steps that consume only already-derived, non-consumptive outputs (aggregated scores, modelobjects with no raw text) can in principle run outside the enclave once those intermediate files are supplied.
