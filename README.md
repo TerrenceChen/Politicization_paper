@@ -24,7 +24,7 @@ The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02
 Each stage reads files written by the previous one:
 
 | Order | Code Files | Input Files | Purpose | Requires TDM Studio access? |
-|---|---|---|---|
+|---|---|---|---|---|
 | 1 | `Dataset.ipynb` | `MainDictionary.txt` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
 | 2 | `Step1_Preprocessing.ipynb` | `non_us_country_adj.csv` | Filter to US articles, dedupe, tokenize, sample | Yes (consumes Step 1 output) |
 | 3 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topics_screened.csv` | LDA topic modeling; manual topic/term screening | No (Can run with the file `dfm_all_compressed_0412.rds` |
