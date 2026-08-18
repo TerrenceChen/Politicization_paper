@@ -307,5 +307,5 @@ topic <-
 length(unique(topic %>% filter(decision != "drop") %>% pull(topic)))  ## 133
 table(topic$decision)                                                 ## drop / keep counts
 
-write.csv(topic, "topics_screened.csv", row.names = FALSE)
+write.csv(topic, "topics_screened_new.csv", row.names = FALSE)
 
