@@ -18,6 +18,9 @@ A researcher wishing to reproduce this study from raw data must:
 - WashingtonPost-HistoricalNewspaper: Search and select "The Washington Post (1974-)" (ID = 47130) in Publication Titles and set Publication date between 01/01/1980 and 12/31/1986.
 4. Once the above data folders are transferred into your Jupyter Notebook, you can run the notebook files below to replicate the results.
 
+Alternatively, researchers could also email tdmstudio@clarivate.com to access my wordbench to replicate the analysis at no costs.
+
+
 ## Pipeline
 
 The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02.6` kernel). Some stages require externally imported files in the `input_files` folder. 
