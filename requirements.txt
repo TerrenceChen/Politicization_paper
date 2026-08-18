@@ -1,0 +1,32 @@
+# R package requirements for this pipeline (R 4.2.3, `sample-r-2025.02.6` kernel).
+# Install with: install.packages(c(<packages below, quoted>))
+# conText is not reliably on CRAN across R/package versions; if install.packages("conText") fails, use:
+#   remotes::install_github("prodriguezsosa/conText")
+# `parallel` is a base R package (ships with R) and needs no install step.
+
+broom
+conText
+data.table
+dplyr
+gamm4
+ggplot2
+glue
+gridExtra
+ldatuning
+lme4
+lsa
+lubridate
+maps
+pacman
+quanteda
+quanteda.textstats
+rvest
+SnowballC
+stringr
+texreg
+tibble
+tidyr
+tidytext
+topicmodels
+WGCNA
+xml2
