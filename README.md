@@ -31,7 +31,7 @@ Each stage reads files written by the previous one:
 |---|---|---|---|---|
 | 0 | `Dataset.ipynb` | `MainDictionary.txt` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
 | 1 | `Step1_Preprocessing.ipynb` | `non_us_country_adj.csv` | Filter to US articles, dedupe, tokenize, sample | Yes |
-| 2 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topics_screened_new.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
+| 2 | `Step2_Topic_Models.ipynb`, `topic_screening.R` | `topic_labels.csv`, `topics_screened_new.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
 | 3 | `Step3_ALC_Embedding.ipynb` | `glove.rds`, `khodakA.rds` |Core analysis: ALC embeddings, politicization scores, regressions, graphs | Yes |
 | 4 | `makeBaldGelData.R`, `Step4_Opinion_Mapping.ipynb` | `results_with_domains.rds` | Compare public opinion trends with politicization trends | No (can run with `results_df_label_combined.rds`) |
 | 5 | `Step5_Close_Reading.ipynb` | `glove.rds`, `khodakA.rds` | Re-runs Step3's ALC embedding pipeline but saves the raw per-term DEMs | Yes |
