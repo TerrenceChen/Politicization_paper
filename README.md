@@ -1,4 +1,4 @@
-The repository stores the code and appendices of the paper "Tracing Politicization in the U.S. Public Sphere, 1980-2024."
+The repository stores the code of the paper "Tracing Politicization in the U.S. Public Sphere, 1980-2024."
 
 ## Restricted data notice
 
