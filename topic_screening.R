@@ -45,7 +45,7 @@ length(unique(topic$topic))  ## 133 topics remain
 
 ## ---- 4. Attach a thematic label to each surviving topic ----
 ## topic_labels.csv already carries the final, reviewed label for every topic.
-topic_labels <- read.csv("topic_labels.csv")
+topic_labels <- read.csv("input_files/topic_labels.csv")
 
 topic <-
   topic %>%
@@ -307,5 +307,5 @@ topic <-
 length(unique(topic %>% filter(decision != "drop") %>% pull(topic)))  ## 133
 table(topic$decision)                                                 ## drop / keep counts
 
-write.csv(topic, "topics_screened_new.csv", row.names = FALSE)
+write.csv(topic, "input_files/topics_screened_new.csv", row.names = FALSE)
 
