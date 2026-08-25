@@ -38,4 +38,3 @@ Each stage reads files written by the previous one:
 | 6 | `AppendixF_ALC_Dems_NewsOnly.ipynb`, `AppendixG_Outlet_Analysis.ipynb`, `AppendixJ_ALC_HighFreq.ipynb` | NA | Appendices — robustness checks: restricted to non-opinion articles (excludes Commentary/Editorial/Review types); re-derives scores separately per outlet (NYT/WP/WSJ); robustness to term frequency | No (run with Step 5 results) |
 
 Steps marked "Yes" read raw or near-raw article text and can only be executed inside a TDM Studio enclave by a researcher with their own ProQuest access.
-Steps that consume only derived outputs (aggregated scores, tokens objects, etc.) can in principle run outside the enclave once those intermediate files are supplied.
