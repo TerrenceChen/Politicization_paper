@@ -41,4 +41,4 @@ Steps marked "Yes" read raw or near-raw article text and can only be executed in
 
 ## Contact
 
-For questions about this reproduction packages, please contact Terrence Ting-Yen Chen at tychen@nyu.edu.
+For questions about this reproduction package, please contact Terrence Ting-Yen Chen at tychen@nyu.edu.
