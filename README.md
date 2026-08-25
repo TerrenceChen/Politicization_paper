@@ -2,7 +2,7 @@ The repository stores the code of the paper "Tracing Politicization in the U.S. 
 
 ## Restricted data notice
 
-The raw article corpus is licensed from **ProQuest TDM Studio** and cannot be redistributed with this package. However, the derived tokens object of the sample of 1.35 million newspaper articles that is used to train word embeddings can be accessed here: 
+The raw article corpus is licensed from **ProQuest TDM Studio** and cannot be redistributed with this package. However, the derived tokens object `all_toks_final_0412.rds` of the sample of 1.35 million newspaper articles that is used to train word embeddings can be accessed here: https://osf.io/mwz2f/overview
 
 A researcher wishing to reproduce this study from raw data must:
 1. Obtain institutional access to ProQuest TDM Studio (https://tdmstudio.proquest.com), typically through a university library subscription.
