@@ -23,7 +23,7 @@ incoherent_topics <- c(18, 34, 41, 61, 65, 67, 93, 96, 103, 124, 138, 139, 145, 
   267, 273, 287, 288, 290, 293, 294, 299, 309, 315, 327, 330, 323, 333, 338,
   340)  ## incoherent, too generic, or not substantively relevant (e.g. jargon-heavy/procedural clusters)
 newspaper_topics <- c(38, 126, 220)  ## newspaper structural sections (corrections, letters, etc.)
-recent_topics <- c(62, 79, 279, 334, 343)  ## dominated by very recent (post-1020) events
+recent_topics <- c(62, 79, 279, 334, 343)  ## dominated by very recent (post-2020) events
 
 manually_dropped_topics <- unique(c(names_topics, incoherent_topics, newspaper_topics, recent_topics))
 
