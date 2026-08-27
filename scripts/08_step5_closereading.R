@@ -11,15 +11,15 @@
 #   ALC_dems/anchors.rds                          (from 02_step5_anchor_dems.R)
 #   ALC_dems/topic_<n>.rds                         (from 01_step5_topic_dems_task.R array)
 #   subsampled_tokens.rds                          (from 00_setup_step5.R)
-#   input/glove.rds, input/khodakA.rds
+#   input_files/glove.rds, input_files/khodakA.rds
 
 library(conText)
 library(quanteda)
 library(dplyr)
 library(ggplot2)
 
-glove  <- readRDS("input/glove.rds")
-khodak <- readRDS("input/khodakA.rds")
+glove  <- readRDS("input_files/glove.rds")
+khodak <- readRDS("input_files/khodakA.rds")
 subsampled_tokens <- readRDS("subsampled_tokens.rds")
 
 # --- Close reading ---
