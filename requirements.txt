@@ -1,4 +1,4 @@
-# R package requirements for this pipeline (R 4.2.3, `sample-r-2025.02.6` kernel).
+# R package requirements for this pipeline (R 4.2.3, `sample-r-2025.02.6` kernel in ProQuest TDM Studio; R 4.5.1 after Step 3).
 # Install with: install.packages(c(<packages below, quoted>))
 # conText is not reliably on CRAN across R/package versions; if install.packages("conText") fails, use:
 #   remotes::install_github("prodriguezsosa/conText")
