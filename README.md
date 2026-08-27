@@ -21,15 +21,25 @@ A researcher wishing to reproduce this study from raw data must:
 Alternatively, researchers could also email tdmstudio@clarivate.com to access my workbench to replicate the analysis at no costs.
 
 ## Repository structure
+
 `input_files`: contains all the externally imported files needed in the analysis. 
+
 `scripts`: contain all the code needed to reproduce the results.
+
 `sbatch`: sbatch files used to run in High Speed Computing System.
+
 `Results_Files`: contains files produced by executing the code.
+
 `ALC_results_topic`: dataframes for politicization scores by topic for ideological politicization.
+
 `ALC_results_party`: dataframes for politicization scores by topic for partisan politicization.
+
 `Graphs`: graphs used in the manuscript.
+
 `Tables`: tables used in the manuscript.
+
 `TDMStudio_Files`: contains the original files I used in ProQuest TDM Studio. They were streamlined for better presentation in the R files in `scripts`.
+
 
 ## Pipeline
 
