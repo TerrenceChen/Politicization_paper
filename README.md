@@ -51,7 +51,7 @@ Each stage reads files written by the previous one:
 |---|---|---|---|---|
 | 0 | `Dataset.ipynb` | `MainDictionary.txt` | Build raw article dataset from ProQuest TDM Studio exports + OCR'd historical WSJ/WP scans | Yes |
 | 1 | `Step1_Preprocessing.ipynb` | `non_us_country_adj.csv` | Filter to US articles, dedupe, tokenize, sample | Yes |
-| 2 | `Step2_Topic_Models.ipynb`, `topic_screening_new.R` | `topic_labels.csv`, `topics_screened_new.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
+| 2 | `Step2_Topic_Models.ipynb`, `topic_screening_new.R` | `topic_labels.csv` | LDA topic modeling; manual topic/term screening | No (can run with the file `dfm_all_compressed_0412.rds`) |
 | 3 | `01_build_subsample_anchors.R`, `02_alc_ideology_task.R`, `03_alc_party_task.R`, `04_analysis_and_figures.R` | `glove.rds`, `khodakA.rds` |Core analysis: ALC embeddings, politicization scores, regressions, graphs | No (can run with the derived `all_toks_ngram_0412.rds` file) |
 | 4 | `makeBaldGelData.R`, `05_step4_opinion_mapping.R` | `results_with_domains.rds` | Compare public opinion trends with politicization trends | No (can run with `Results_Files/results_df_label_combined.rds`) |
 | 5 | `06_step5_topic_dems_task.R`, `07_step5_anchor_dems.R` | `glove.rds`, `khodakA.rds` | Re-runs Step3's ALC embedding pipeline but saves the raw per-term DEMs | No (can run with the derived `all_toks_ngram_0412.rds` file) |
