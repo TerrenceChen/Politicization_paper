@@ -30,9 +30,9 @@ Alternatively, researchers could also email tdmstudio@clarivate.com to access my
 
 `Results_Files`: contains files produced by executing the code.
 
-`ALC_results_topic`: dataframes for politicization scores by topic for ideological politicization.
+`ALC_results_topic`: per-topic checkpoint files from the ideology job array (`02_alc_ideology_task.R`), one file per LDA topic. Each file holds one row per term-year with the mean cosine similarity of that term's ALC embedding to the "liberal" and "conservative" anchor embeddings, averaged over the 20 subsamples.
 
-`ALC_results_party`: dataframes for politicization scores by topic for partisan politicization.
+`ALC_results_party`: per-topic checkpoint files from the party job array (`03_alc_party_task.R`), one file per LDA topic. Each file holds one row per term-year with the mean cosine similarity of that term's ALC embedding to the "democrat" and "republican" anchor embeddings, averaged over the 20 subsamples.
 
 `Graphs`: graphs used in the manuscript.
 
