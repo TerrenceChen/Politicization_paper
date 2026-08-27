@@ -24,7 +24,7 @@ Alternatively, researchers could also email tdmstudio@clarivate.com to access my
 
 `input_files`: contains all the externally imported files needed in the analysis. 
 
-`scripts`: contain all the code needed to reproduce the results.
+`scripts`: contains all the code needed to reproduce the results.
 
 `sbatch`: sbatch files used to run in High Speed Computing System.
 
