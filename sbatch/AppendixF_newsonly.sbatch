@@ -13,5 +13,5 @@
 module purge
 module load r/4.5.1
 
-cd /scratch/tc3421/Politicization_paper   # EDIT if your project lives elsewhere
-Rscript scripts/05_appendixF_newsonly.R
+cd /scratch/tc3421/Politicization_paper
+Rscript scripts/AppendixF_newsonly.R
