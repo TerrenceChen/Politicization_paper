@@ -223,6 +223,10 @@ saveRDS(results_df_newsonly,       "Results_Files/ALC_ideology_results_df_newson
 saveRDS(results_df_party_newsonly, "Results_Files/ALC_party_results_df_newsonly.rds")
 
 # --- Load original All-Articles results, processed the same way ---
+
+results_df_newsonly <- readRDS("Results_Files/ALC_ideology_results_df_newsonly.rds")
+results_df_party_newsonly <- readRDS("Results_Files/ALC_party_results_df_newsonly.rds")
+
 results_df_original <- readRDS("Results_Files/ALC_ideology_results_df.rds") %>%
   filter(frequency >= 10) %>%
   mutate(pol_score       = (cos_liberal_mean  + cos_con_mean)  / 2,
@@ -303,7 +307,7 @@ results_df_cat_combined %>%
     labs(x = "Year", y = "Politicization Score") +
     guides(color = guide_legend(title = ""))
 
-ggsave("FigureF1_pol_trend_compare.png", width = 10)
+ggsave("FigureF1_pol_trend_compare.png", width = 6.5, height =7)
 
 # --- Category-level early vs. late period (Figures 3/4 style) ---
 category_year <- results_df_cat_combined %>%
