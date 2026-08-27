@@ -1,0 +1,162 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 25 -> topic: 59
+Processing topic: 59
+1518 instances of "compensation" found.
+1573 instances of "compensation" found.
+1648 instances of "compensation" found.
+1462 instances of "compensation" found.
+1410 instances of "compensation" found.
+1474 instances of "compensation" found.
+1718 instances of "compensation" found.
+1524 instances of "compensation" found.
+1422 instances of "compensation" found.
+1466 instances of "compensation" found.
+1797 instances of "compensation" found.
+1485 instances of "compensation" found.
+1715 instances of "compensation" found.
+1728 instances of "compensation" found.
+1480 instances of "compensation" found.
+1404 instances of "compensation" found.
+1642 instances of "compensation" found.
+1634 instances of "compensation" found.
+1468 instances of "compensation" found.
+1586 instances of "compensation" found.
+1292 instances of "salary" found.
+1330 instances of "salary" found.
+1481 instances of "salary" found.
+1313 instances of "salary" found.
+1311 instances of "salary" found.
+1403 instances of "salary" found.
+1420 instances of "salary" found.
+1385 instances of "salary" found.
+1386 instances of "salary" found.
+1332 instances of "salary" found.
+1301 instances of "salary" found.
+1325 instances of "salary" found.
+1373 instances of "salary" found.
+1332 instances of "salary" found.
+1425 instances of "salary" found.
+1384 instances of "salary" found.
+1281 instances of "salary" found.
+1454 instances of "salary" found.
+1337 instances of "salary" found.
+1331 instances of "salary" found.
+690 instances of "bonus" found.
+739 instances of "bonus" found.
+826 instances of "bonus" found.
+804 instances of "bonus" found.
+750 instances of "bonus" found.
+750 instances of "bonus" found.
+719 instances of "bonus" found.
+739 instances of "bonus" found.
+729 instances of "bonus" found.
+726 instances of "bonus" found.
+760 instances of "bonus" found.
+699 instances of "bonus" found.
+828 instances of "bonus" found.
+828 instances of "bonus" found.
+716 instances of "bonus" found.
+727 instances of "bonus" found.
+819 instances of "bonus" found.
+686 instances of "bonus" found.
+757 instances of "bonus" found.
+781 instances of "bonus" found.
+528 instances of "bonuses" found.
+507 instances of "bonuses" found.
+501 instances of "bonuses" found.
+588 instances of "bonuses" found.
+585 instances of "bonuses" found.
+532 instances of "bonuses" found.
+520 instances of "bonuses" found.
+542 instances of "bonuses" found.
+516 instances of "bonuses" found.
+470 instances of "bonuses" found.
+643 instances of "bonuses" found.
+589 instances of "bonuses" found.
+592 instances of "bonuses" found.
+582 instances of "bonuses" found.
+546 instances of "bonuses" found.
+509 instances of "bonuses" found.
+514 instances of "bonuses" found.
+518 instances of "bonuses" found.
+515 instances of "bonuses" found.
+552 instances of "bonuses" found.
+267 instances of "ceos" found.
+255 instances of "ceos" found.
+270 instances of "ceos" found.
+299 instances of "ceos" found.
+248 instances of "ceos" found.
+339 instances of "ceos" found.
+293 instances of "ceos" found.
+254 instances of "ceos" found.
+235 instances of "ceos" found.
+227 instances of "ceos" found.
+263 instances of "ceos" found.
+254 instances of "ceos" found.
+241 instances of "ceos" found.
+253 instances of "ceos" found.
+249 instances of "ceos" found.
+259 instances of "ceos" found.
+250 instances of "ceos" found.
+266 instances of "ceos" found.
+222 instances of "ceos" found.
+217 instances of "ceos" found.
+264 instances of "severance" found.
+216 instances of "severance" found.
+289 instances of "severance" found.
+253 instances of "severance" found.
+263 instances of "severance" found.
+244 instances of "severance" found.
+239 instances of "severance" found.
+285 instances of "severance" found.
+257 instances of "severance" found.
+180 instances of "severance" found.
+248 instances of "severance" found.
+267 instances of "severance" found.
+270 instances of "severance" found.
+293 instances of "severance" found.
+254 instances of "severance" found.
+253 instances of "severance" found.
+242 instances of "severance" found.
+206 instances of "severance" found.
+263 instances of "severance" found.
+266 instances of "severance" found.
+270 instances of "stock-options" found.
+296 instances of "stock-options" found.
+305 instances of "stock-options" found.
+261 instances of "stock-options" found.
+291 instances of "stock-options" found.
+272 instances of "stock-options" found.
+301 instances of "stock-options" found.
+255 instances of "stock-options" found.
+243 instances of "stock-options" found.
+293 instances of "stock-options" found.
+354 instances of "stock-options" found.
+292 instances of "stock-options" found.
+262 instances of "stock-options" found.
+265 instances of "stock-options" found.
+342 instances of "stock-options" found.
+331 instances of "stock-options" found.
+324 instances of "stock-options" found.
+327 instances of "stock-options" found.
+297 instances of "stock-options" found.
+258 instances of "stock-options" found.
+Saved topic: 59

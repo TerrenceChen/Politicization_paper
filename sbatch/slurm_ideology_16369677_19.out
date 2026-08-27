@@ -1,0 +1,141 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 19 -> topic: 43
+1402 instances of "amendment" found.
+1325 instances of "amendment" found.
+1499 instances of "amendment" found.
+1446 instances of "amendment" found.
+1515 instances of "amendment" found.
+1457 instances of "amendment" found.
+1540 instances of "amendment" found.
+1420 instances of "amendment" found.
+1555 instances of "amendment" found.
+1451 instances of "amendment" found.
+1449 instances of "amendment" found.
+1658 instances of "amendment" found.
+1533 instances of "amendment" found.
+1506 instances of "amendment" found.
+1450 instances of "amendment" found.
+1565 instances of "amendment" found.
+1466 instances of "amendment" found.
+1444 instances of "amendment" found.
+1548 instances of "amendment" found.
+1428 instances of "amendment" found.
+514 instances of "statute" found.
+477 instances of "statute" found.
+499 instances of "statute" found.
+547 instances of "statute" found.
+462 instances of "statute" found.
+449 instances of "statute" found.
+452 instances of "statute" found.
+504 instances of "statute" found.
+470 instances of "statute" found.
+522 instances of "statute" found.
+445 instances of "statute" found.
+449 instances of "statute" found.
+456 instances of "statute" found.
+504 instances of "statute" found.
+499 instances of "statute" found.
+484 instances of "statute" found.
+470 instances of "statute" found.
+512 instances of "statute" found.
+487 instances of "statute" found.
+498 instances of "statute" found.
+464 instances of "first-amendment" found.
+568 instances of "first-amendment" found.
+521 instances of "first-amendment" found.
+506 instances of "first-amendment" found.
+470 instances of "first-amendment" found.
+440 instances of "first-amendment" found.
+532 instances of "first-amendment" found.
+493 instances of "first-amendment" found.
+499 instances of "first-amendment" found.
+507 instances of "first-amendment" found.
+511 instances of "first-amendment" found.
+468 instances of "first-amendment" found.
+459 instances of "first-amendment" found.
+429 instances of "first-amendment" found.
+459 instances of "first-amendment" found.
+503 instances of "first-amendment" found.
+425 instances of "first-amendment" found.
+526 instances of "first-amendment" found.
+490 instances of "first-amendment" found.
+447 instances of "first-amendment" found.
+209 instances of "statutes" found.
+158 instances of "statutes" found.
+190 instances of "statutes" found.
+181 instances of "statutes" found.
+171 instances of "statutes" found.
+180 instances of "statutes" found.
+170 instances of "statutes" found.
+206 instances of "statutes" found.
+193 instances of "statutes" found.
+196 instances of "statutes" found.
+220 instances of "statutes" found.
+200 instances of "statutes" found.
+167 instances of "statutes" found.
+218 instances of "statutes" found.
+198 instances of "statutes" found.
+201 instances of "statutes" found.
+184 instances of "statutes" found.
+159 instances of "statutes" found.
+229 instances of "statutes" found.
+192 instances of "statutes" found.
+115 instances of "constitutionality" found.
+139 instances of "constitutionality" found.
+102 instances of "constitutionality" found.
+133 instances of "constitutionality" found.
+135 instances of "constitutionality" found.
+112 instances of "constitutionality" found.
+152 instances of "constitutionality" found.
+104 instances of "constitutionality" found.
+95 instances of "constitutionality" found.
+101 instances of "constitutionality" found.
+108 instances of "constitutionality" found.
+108 instances of "constitutionality" found.
+108 instances of "constitutionality" found.
+115 instances of "constitutionality" found.
+107 instances of "constitutionality" found.
+119 instances of "constitutionality" found.
+118 instances of "constitutionality" found.
+80 instances of "constitutionality" found.
+112 instances of "constitutionality" found.
+107 instances of "constitutionality" found.
+56 instances of "equal-protection" found.
+63 instances of "equal-protection" found.
+80 instances of "equal-protection" found.
+78 instances of "equal-protection" found.
+57 instances of "equal-protection" found.
+68 instances of "equal-protection" found.
+74 instances of "equal-protection" found.
+90 instances of "equal-protection" found.
+81 instances of "equal-protection" found.
+73 instances of "equal-protection" found.
+99 instances of "equal-protection" found.
+62 instances of "equal-protection" found.
+68 instances of "equal-protection" found.
+68 instances of "equal-protection" found.
+81 instances of "equal-protection" found.
+69 instances of "equal-protection" found.
+91 instances of "equal-protection" found.
+62 instances of "equal-protection" found.
+95 instances of "equal-protection" found.
+49 instances of "equal-protection" found.
+Saved topic: 43

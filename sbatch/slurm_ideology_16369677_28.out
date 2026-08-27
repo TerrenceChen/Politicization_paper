@@ -1,0 +1,201 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 28 -> topic: 73
+1223 instances of "terrorism" found.
+1214 instances of "terrorism" found.
+1147 instances of "terrorism" found.
+1244 instances of "terrorism" found.
+1105 instances of "terrorism" found.
+1191 instances of "terrorism" found.
+1145 instances of "terrorism" found.
+1016 instances of "terrorism" found.
+1116 instances of "terrorism" found.
+1078 instances of "terrorism" found.
+995 instances of "terrorism" found.
+1168 instances of "terrorism" found.
+1077 instances of "terrorism" found.
+1160 instances of "terrorism" found.
+1152 instances of "terrorism" found.
+1123 instances of "terrorism" found.
+1076 instances of "terrorism" found.
+1167 instances of "terrorism" found.
+1241 instances of "terrorism" found.
+1266 instances of "terrorism" found.
+886 instances of "terrorist" found.
+846 instances of "terrorist" found.
+903 instances of "terrorist" found.
+919 instances of "terrorist" found.
+804 instances of "terrorist" found.
+905 instances of "terrorist" found.
+831 instances of "terrorist" found.
+781 instances of "terrorist" found.
+866 instances of "terrorist" found.
+802 instances of "terrorist" found.
+753 instances of "terrorist" found.
+860 instances of "terrorist" found.
+807 instances of "terrorist" found.
+913 instances of "terrorist" found.
+841 instances of "terrorist" found.
+787 instances of "terrorist" found.
+884 instances of "terrorist" found.
+899 instances of "terrorist" found.
+937 instances of "terrorist" found.
+866 instances of "terrorist" found.
+744 instances of "terrorists" found.
+697 instances of "terrorists" found.
+641 instances of "terrorists" found.
+723 instances of "terrorists" found.
+652 instances of "terrorists" found.
+724 instances of "terrorists" found.
+732 instances of "terrorists" found.
+632 instances of "terrorists" found.
+614 instances of "terrorists" found.
+734 instances of "terrorists" found.
+631 instances of "terrorists" found.
+717 instances of "terrorists" found.
+676 instances of "terrorists" found.
+656 instances of "terrorists" found.
+653 instances of "terrorists" found.
+708 instances of "terrorists" found.
+672 instances of "terrorists" found.
+699 instances of "terrorists" found.
+732 instances of "terrorists" found.
+734 instances of "terrorists" found.
+597 instances of "homeland-security" found.
+553 instances of "homeland-security" found.
+672 instances of "homeland-security" found.
+572 instances of "homeland-security" found.
+654 instances of "homeland-security" found.
+642 instances of "homeland-security" found.
+550 instances of "homeland-security" found.
+478 instances of "homeland-security" found.
+563 instances of "homeland-security" found.
+592 instances of "homeland-security" found.
+626 instances of "homeland-security" found.
+570 instances of "homeland-security" found.
+639 instances of "homeland-security" found.
+642 instances of "homeland-security" found.
+607 instances of "homeland-security" found.
+651 instances of "homeland-security" found.
+652 instances of "homeland-security" found.
+625 instances of "homeland-security" found.
+639 instances of "homeland-security" found.
+561 instances of "homeland-security" found.
+291 instances of "terrorist-attacks" found.
+280 instances of "terrorist-attacks" found.
+302 instances of "terrorist-attacks" found.
+293 instances of "terrorist-attacks" found.
+272 instances of "terrorist-attacks" found.
+288 instances of "terrorist-attacks" found.
+277 instances of "terrorist-attacks" found.
+238 instances of "terrorist-attacks" found.
+315 instances of "terrorist-attacks" found.
+255 instances of "terrorist-attacks" found.
+268 instances of "terrorist-attacks" found.
+270 instances of "terrorist-attacks" found.
+249 instances of "terrorist-attacks" found.
+259 instances of "terrorist-attacks" found.
+267 instances of "terrorist-attacks" found.
+260 instances of "terrorist-attacks" found.
+309 instances of "terrorist-attacks" found.
+259 instances of "terrorist-attacks" found.
+250 instances of "terrorist-attacks" found.
+281 instances of "terrorist-attacks" found.
+232 instances of "cybersecurity" found.
+250 instances of "cybersecurity" found.
+225 instances of "cybersecurity" found.
+251 instances of "cybersecurity" found.
+261 instances of "cybersecurity" found.
+251 instances of "cybersecurity" found.
+296 instances of "cybersecurity" found.
+230 instances of "cybersecurity" found.
+301 instances of "cybersecurity" found.
+215 instances of "cybersecurity" found.
+186 instances of "cybersecurity" found.
+222 instances of "cybersecurity" found.
+285 instances of "cybersecurity" found.
+222 instances of "cybersecurity" found.
+283 instances of "cybersecurity" found.
+262 instances of "cybersecurity" found.
+206 instances of "cybersecurity" found.
+254 instances of "cybersecurity" found.
+270 instances of "cybersecurity" found.
+277 instances of "cybersecurity" found.
+126 instances of "terrorist-attack" found.
+148 instances of "terrorist-attack" found.
+124 instances of "terrorist-attack" found.
+136 instances of "terrorist-attack" found.
+119 instances of "terrorist-attack" found.
+133 instances of "terrorist-attack" found.
+121 instances of "terrorist-attack" found.
+101 instances of "terrorist-attack" found.
+134 instances of "terrorist-attack" found.
+125 instances of "terrorist-attack" found.
+126 instances of "terrorist-attack" found.
+120 instances of "terrorist-attack" found.
+123 instances of "terrorist-attack" found.
+119 instances of "terrorist-attack" found.
+113 instances of "terrorist-attack" found.
+132 instances of "terrorist-attack" found.
+138 instances of "terrorist-attack" found.
+137 instances of "terrorist-attack" found.
+155 instances of "terrorist-attack" found.
+138 instances of "terrorist-attack" found.
+114 instances of "attackers" found.
+134 instances of "attackers" found.
+107 instances of "attackers" found.
+151 instances of "attackers" found.
+132 instances of "attackers" found.
+131 instances of "attackers" found.
+148 instances of "attackers" found.
+92 instances of "attackers" found.
+138 instances of "attackers" found.
+125 instances of "attackers" found.
+132 instances of "attackers" found.
+114 instances of "attackers" found.
+132 instances of "attackers" found.
+116 instances of "attackers" found.
+128 instances of "attackers" found.
+145 instances of "attackers" found.
+107 instances of "attackers" found.
+133 instances of "attackers" found.
+153 instances of "attackers" found.
+144 instances of "attackers" found.
+87 instances of "hijackers" found.
+62 instances of "hijackers" found.
+55 instances of "hijackers" found.
+102 instances of "hijackers" found.
+91 instances of "hijackers" found.
+112 instances of "hijackers" found.
+114 instances of "hijackers" found.
+64 instances of "hijackers" found.
+61 instances of "hijackers" found.
+93 instances of "hijackers" found.
+70 instances of "hijackers" found.
+75 instances of "hijackers" found.
+96 instances of "hijackers" found.
+75 instances of "hijackers" found.
+67 instances of "hijackers" found.
+116 instances of "hijackers" found.
+72 instances of "hijackers" found.
+71 instances of "hijackers" found.
+122 instances of "hijackers" found.
+60 instances of "hijackers" found.
+Saved topic: 73

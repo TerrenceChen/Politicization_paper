@@ -1,0 +1,141 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 91 -> topic: 222
+3403 instances of "baseball" found.
+3353 instances of "baseball" found.
+3314 instances of "baseball" found.
+3440 instances of "baseball" found.
+3491 instances of "baseball" found.
+3499 instances of "baseball" found.
+3191 instances of "baseball" found.
+3551 instances of "baseball" found.
+3359 instances of "baseball" found.
+3437 instances of "baseball" found.
+3605 instances of "baseball" found.
+3448 instances of "baseball" found.
+3498 instances of "baseball" found.
+3644 instances of "baseball" found.
+3160 instances of "baseball" found.
+3500 instances of "baseball" found.
+3500 instances of "baseball" found.
+3738 instances of "baseball" found.
+3457 instances of "baseball" found.
+3585 instances of "baseball" found.
+337 instances of "major-league-baseball" found.
+322 instances of "major-league-baseball" found.
+328 instances of "major-league-baseball" found.
+341 instances of "major-league-baseball" found.
+378 instances of "major-league-baseball" found.
+384 instances of "major-league-baseball" found.
+316 instances of "major-league-baseball" found.
+368 instances of "major-league-baseball" found.
+349 instances of "major-league-baseball" found.
+346 instances of "major-league-baseball" found.
+365 instances of "major-league-baseball" found.
+374 instances of "major-league-baseball" found.
+356 instances of "major-league-baseball" found.
+352 instances of "major-league-baseball" found.
+334 instances of "major-league-baseball" found.
+366 instances of "major-league-baseball" found.
+370 instances of "major-league-baseball" found.
+399 instances of "major-league-baseball" found.
+349 instances of "major-league-baseball" found.
+387 instances of "major-league-baseball" found.
+209 instances of "mlb" found.
+255 instances of "mlb" found.
+255 instances of "mlb" found.
+217 instances of "mlb" found.
+263 instances of "mlb" found.
+280 instances of "mlb" found.
+275 instances of "mlb" found.
+265 instances of "mlb" found.
+234 instances of "mlb" found.
+176 instances of "mlb" found.
+247 instances of "mlb" found.
+288 instances of "mlb" found.
+253 instances of "mlb" found.
+276 instances of "mlb" found.
+210 instances of "mlb" found.
+236 instances of "mlb" found.
+294 instances of "mlb" found.
+251 instances of "mlb" found.
+199 instances of "mlb" found.
+334 instances of "mlb" found.
+205 instances of "ballpark" found.
+207 instances of "ballpark" found.
+230 instances of "ballpark" found.
+222 instances of "ballpark" found.
+235 instances of "ballpark" found.
+244 instances of "ballpark" found.
+228 instances of "ballpark" found.
+200 instances of "ballpark" found.
+234 instances of "ballpark" found.
+228 instances of "ballpark" found.
+242 instances of "ballpark" found.
+214 instances of "ballpark" found.
+204 instances of "ballpark" found.
+234 instances of "ballpark" found.
+213 instances of "ballpark" found.
+243 instances of "ballpark" found.
+216 instances of "ballpark" found.
+226 instances of "ballpark" found.
+219 instances of "ballpark" found.
+216 instances of "ballpark" found.
+130 instances of "umpires" found.
+155 instances of "umpires" found.
+175 instances of "umpires" found.
+103 instances of "umpires" found.
+124 instances of "umpires" found.
+175 instances of "umpires" found.
+165 instances of "umpires" found.
+168 instances of "umpires" found.
+140 instances of "umpires" found.
+144 instances of "umpires" found.
+175 instances of "umpires" found.
+150 instances of "umpires" found.
+133 instances of "umpires" found.
+163 instances of "umpires" found.
+160 instances of "umpires" found.
+112 instances of "umpires" found.
+110 instances of "umpires" found.
+139 instances of "umpires" found.
+152 instances of "umpires" found.
+220 instances of "umpires" found.
+113 instances of "babe-ruth" found.
+93 instances of "babe-ruth" found.
+91 instances of "babe-ruth" found.
+108 instances of "babe-ruth" found.
+99 instances of "babe-ruth" found.
+118 instances of "babe-ruth" found.
+132 instances of "babe-ruth" found.
+89 instances of "babe-ruth" found.
+85 instances of "babe-ruth" found.
+127 instances of "babe-ruth" found.
+98 instances of "babe-ruth" found.
+90 instances of "babe-ruth" found.
+125 instances of "babe-ruth" found.
+93 instances of "babe-ruth" found.
+91 instances of "babe-ruth" found.
+118 instances of "babe-ruth" found.
+99 instances of "babe-ruth" found.
+96 instances of "babe-ruth" found.
+86 instances of "babe-ruth" found.
+80 instances of "babe-ruth" found.
+Saved topic: 222

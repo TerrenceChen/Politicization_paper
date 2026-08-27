@@ -1,0 +1,182 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 11 -> topic: 20
+Processing topic: 20
+2150 instances of "festival" found.
+2153 instances of "festival" found.
+2222 instances of "festival" found.
+2079 instances of "festival" found.
+2530 instances of "festival" found.
+2262 instances of "festival" found.
+2098 instances of "festival" found.
+2107 instances of "festival" found.
+2144 instances of "festival" found.
+2386 instances of "festival" found.
+2257 instances of "festival" found.
+2164 instances of "festival" found.
+2041 instances of "festival" found.
+2358 instances of "festival" found.
+2051 instances of "festival" found.
+2050 instances of "festival" found.
+2271 instances of "festival" found.
+2206 instances of "festival" found.
+2080 instances of "festival" found.
+2271 instances of "festival" found.
+809 instances of "parade" found.
+892 instances of "parade" found.
+907 instances of "parade" found.
+885 instances of "parade" found.
+977 instances of "parade" found.
+986 instances of "parade" found.
+859 instances of "parade" found.
+774 instances of "parade" found.
+953 instances of "parade" found.
+939 instances of "parade" found.
+856 instances of "parade" found.
+816 instances of "parade" found.
+974 instances of "parade" found.
+1014 instances of "parade" found.
+945 instances of "parade" found.
+831 instances of "parade" found.
+972 instances of "parade" found.
+939 instances of "parade" found.
+898 instances of "parade" found.
+871 instances of "parade" found.
+319 instances of "fireworks" found.
+291 instances of "fireworks" found.
+365 instances of "fireworks" found.
+300 instances of "fireworks" found.
+394 instances of "fireworks" found.
+341 instances of "fireworks" found.
+388 instances of "fireworks" found.
+316 instances of "fireworks" found.
+331 instances of "fireworks" found.
+307 instances of "fireworks" found.
+420 instances of "fireworks" found.
+403 instances of "fireworks" found.
+268 instances of "fireworks" found.
+422 instances of "fireworks" found.
+369 instances of "fireworks" found.
+260 instances of "fireworks" found.
+325 instances of "fireworks" found.
+296 instances of "fireworks" found.
+346 instances of "fireworks" found.
+276 instances of "fireworks" found.
+291 instances of "gala" found.
+328 instances of "gala" found.
+337 instances of "gala" found.
+379 instances of "gala" found.
+373 instances of "gala" found.
+744 instances of "gala" found.
+341 instances of "gala" found.
+345 instances of "gala" found.
+379 instances of "gala" found.
+380 instances of "gala" found.
+373 instances of "gala" found.
+443 instances of "gala" found.
+391 instances of "gala" found.
+364 instances of "gala" found.
+407 instances of "gala" found.
+397 instances of "gala" found.
+355 instances of "gala" found.
+350 instances of "gala" found.
+409 instances of "gala" found.
+357 instances of "gala" found.
+145 instances of "festivities" found.
+152 instances of "festivities" found.
+149 instances of "festivities" found.
+143 instances of "festivities" found.
+170 instances of "festivities" found.
+157 instances of "festivities" found.
+144 instances of "festivities" found.
+146 instances of "festivities" found.
+155 instances of "festivities" found.
+164 instances of "festivities" found.
+157 instances of "festivities" found.
+157 instances of "festivities" found.
+174 instances of "festivities" found.
+157 instances of "festivities" found.
+166 instances of "festivities" found.
+150 instances of "festivities" found.
+161 instances of "festivities" found.
+174 instances of "festivities" found.
+144 instances of "festivities" found.
+169 instances of "festivities" found.
+280 instances of "ceremonies" found.
+262 instances of "ceremonies" found.
+262 instances of "ceremonies" found.
+302 instances of "ceremonies" found.
+291 instances of "ceremonies" found.
+272 instances of "ceremonies" found.
+271 instances of "ceremonies" found.
+252 instances of "ceremonies" found.
+261 instances of "ceremonies" found.
+273 instances of "ceremonies" found.
+322 instances of "ceremonies" found.
+270 instances of "ceremonies" found.
+267 instances of "ceremonies" found.
+259 instances of "ceremonies" found.
+296 instances of "ceremonies" found.
+294 instances of "ceremonies" found.
+247 instances of "ceremonies" found.
+256 instances of "ceremonies" found.
+307 instances of "ceremonies" found.
+276 instances of "ceremonies" found.
+172 instances of "festivals" found.
+180 instances of "festivals" found.
+198 instances of "festivals" found.
+211 instances of "festivals" found.
+226 instances of "festivals" found.
+260 instances of "festivals" found.
+204 instances of "festivals" found.
+227 instances of "festivals" found.
+193 instances of "festivals" found.
+218 instances of "festivals" found.
+209 instances of "festivals" found.
+147 instances of "festivals" found.
+260 instances of "festivals" found.
+168 instances of "festivals" found.
+184 instances of "festivals" found.
+215 instances of "festivals" found.
+221 instances of "festivals" found.
+201 instances of "festivals" found.
+178 instances of "festivals" found.
+234 instances of "festivals" found.
+73 instances of "fest" found.
+74 instances of "fest" found.
+80 instances of "fest" found.
+81 instances of "fest" found.
+105 instances of "fest" found.
+77 instances of "fest" found.
+89 instances of "fest" found.
+81 instances of "fest" found.
+103 instances of "fest" found.
+101 instances of "fest" found.
+67 instances of "fest" found.
+102 instances of "fest" found.
+130 instances of "fest" found.
+107 instances of "fest" found.
+92 instances of "fest" found.
+68 instances of "fest" found.
+71 instances of "fest" found.
+76 instances of "fest" found.
+77 instances of "fest" found.
+81 instances of "fest" found.
+Saved topic: 20

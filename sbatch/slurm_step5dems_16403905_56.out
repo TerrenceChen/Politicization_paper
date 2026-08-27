@@ -1,0 +1,142 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 56 -> topic: 147
+Processing topic: 147
+438 instances of "monument" found.
+507 instances of "monument" found.
+485 instances of "monument" found.
+399 instances of "monument" found.
+530 instances of "monument" found.
+422 instances of "monument" found.
+513 instances of "monument" found.
+507 instances of "monument" found.
+425 instances of "monument" found.
+480 instances of "monument" found.
+476 instances of "monument" found.
+485 instances of "monument" found.
+493 instances of "monument" found.
+501 instances of "monument" found.
+445 instances of "monument" found.
+520 instances of "monument" found.
+507 instances of "monument" found.
+480 instances of "monument" found.
+479 instances of "monument" found.
+505 instances of "monument" found.
+289 instances of "confederate" found.
+301 instances of "confederate" found.
+270 instances of "confederate" found.
+293 instances of "confederate" found.
+295 instances of "confederate" found.
+178 instances of "confederate" found.
+340 instances of "confederate" found.
+249 instances of "confederate" found.
+283 instances of "confederate" found.
+307 instances of "confederate" found.
+336 instances of "confederate" found.
+279 instances of "confederate" found.
+309 instances of "confederate" found.
+315 instances of "confederate" found.
+251 instances of "confederate" found.
+303 instances of "confederate" found.
+342 instances of "confederate" found.
+273 instances of "confederate" found.
+358 instances of "confederate" found.
+329 instances of "confederate" found.
+242 instances of "slaves" found.
+300 instances of "slaves" found.
+279 instances of "slaves" found.
+275 instances of "slaves" found.
+252 instances of "slaves" found.
+246 instances of "slaves" found.
+271 instances of "slaves" found.
+217 instances of "slaves" found.
+330 instances of "slaves" found.
+281 instances of "slaves" found.
+252 instances of "slaves" found.
+240 instances of "slaves" found.
+274 instances of "slaves" found.
+305 instances of "slaves" found.
+290 instances of "slaves" found.
+254 instances of "slaves" found.
+282 instances of "slaves" found.
+216 instances of "slaves" found.
+269 instances of "slaves" found.
+320 instances of "slaves" found.
+181 instances of "monuments" found.
+208 instances of "monuments" found.
+197 instances of "monuments" found.
+199 instances of "monuments" found.
+288 instances of "monuments" found.
+200 instances of "monuments" found.
+213 instances of "monuments" found.
+190 instances of "monuments" found.
+197 instances of "monuments" found.
+189 instances of "monuments" found.
+219 instances of "monuments" found.
+211 instances of "monuments" found.
+264 instances of "monuments" found.
+249 instances of "monuments" found.
+177 instances of "monuments" found.
+289 instances of "monuments" found.
+220 instances of "monuments" found.
+178 instances of "monuments" found.
+235 instances of "monuments" found.
+255 instances of "monuments" found.
+88 instances of "gettysburg" found.
+121 instances of "gettysburg" found.
+100 instances of "gettysburg" found.
+91 instances of "gettysburg" found.
+70 instances of "gettysburg" found.
+91 instances of "gettysburg" found.
+84 instances of "gettysburg" found.
+93 instances of "gettysburg" found.
+97 instances of "gettysburg" found.
+67 instances of "gettysburg" found.
+82 instances of "gettysburg" found.
+86 instances of "gettysburg" found.
+86 instances of "gettysburg" found.
+120 instances of "gettysburg" found.
+65 instances of "gettysburg" found.
+133 instances of "gettysburg" found.
+111 instances of "gettysburg" found.
+100 instances of "gettysburg" found.
+120 instances of "gettysburg" found.
+92 instances of "gettysburg" found.
+88 instances of "confederacy" found.
+103 instances of "confederacy" found.
+77 instances of "confederacy" found.
+67 instances of "confederacy" found.
+63 instances of "confederacy" found.
+76 instances of "confederacy" found.
+87 instances of "confederacy" found.
+72 instances of "confederacy" found.
+103 instances of "confederacy" found.
+81 instances of "confederacy" found.
+75 instances of "confederacy" found.
+82 instances of "confederacy" found.
+122 instances of "confederacy" found.
+91 instances of "confederacy" found.
+81 instances of "confederacy" found.
+89 instances of "confederacy" found.
+92 instances of "confederacy" found.
+101 instances of "confederacy" found.
+114 instances of "confederacy" found.
+99 instances of "confederacy" found.
+Saved topic: 147

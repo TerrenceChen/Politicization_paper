@@ -1,0 +1,182 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 1 -> topic: 1
+Processing topic: 1
+23625 instances of "business" found.
+23137 instances of "business" found.
+24291 instances of "business" found.
+23586 instances of "business" found.
+23793 instances of "business" found.
+23740 instances of "business" found.
+22761 instances of "business" found.
+23319 instances of "business" found.
+23670 instances of "business" found.
+23512 instances of "business" found.
+23912 instances of "business" found.
+23613 instances of "business" found.
+23121 instances of "business" found.
+23888 instances of "business" found.
+23781 instances of "business" found.
+23915 instances of "business" found.
+23165 instances of "business" found.
+24449 instances of "business" found.
+24400 instances of "business" found.
+23816 instances of "business" found.
+484 instances of "entrepreneurs" found.
+478 instances of "entrepreneurs" found.
+594 instances of "entrepreneurs" found.
+399 instances of "entrepreneurs" found.
+522 instances of "entrepreneurs" found.
+505 instances of "entrepreneurs" found.
+466 instances of "entrepreneurs" found.
+474 instances of "entrepreneurs" found.
+538 instances of "entrepreneurs" found.
+480 instances of "entrepreneurs" found.
+470 instances of "entrepreneurs" found.
+539 instances of "entrepreneurs" found.
+476 instances of "entrepreneurs" found.
+473 instances of "entrepreneurs" found.
+507 instances of "entrepreneurs" found.
+509 instances of "entrepreneurs" found.
+511 instances of "entrepreneurs" found.
+489 instances of "entrepreneurs" found.
+514 instances of "entrepreneurs" found.
+456 instances of "entrepreneurs" found.
+573 instances of "small-businesses" found.
+544 instances of "small-businesses" found.
+543 instances of "small-businesses" found.
+557 instances of "small-businesses" found.
+523 instances of "small-businesses" found.
+537 instances of "small-businesses" found.
+503 instances of "small-businesses" found.
+496 instances of "small-businesses" found.
+539 instances of "small-businesses" found.
+514 instances of "small-businesses" found.
+563 instances of "small-businesses" found.
+521 instances of "small-businesses" found.
+497 instances of "small-businesses" found.
+491 instances of "small-businesses" found.
+578 instances of "small-businesses" found.
+505 instances of "small-businesses" found.
+512 instances of "small-businesses" found.
+543 instances of "small-businesses" found.
+507 instances of "small-businesses" found.
+551 instances of "small-businesses" found.
+104 instances of "entrepreneurship" found.
+107 instances of "entrepreneurship" found.
+133 instances of "entrepreneurship" found.
+80 instances of "entrepreneurship" found.
+85 instances of "entrepreneurship" found.
+120 instances of "entrepreneurship" found.
+100 instances of "entrepreneurship" found.
+108 instances of "entrepreneurship" found.
+139 instances of "entrepreneurship" found.
+146 instances of "entrepreneurship" found.
+117 instances of "entrepreneurship" found.
+113 instances of "entrepreneurship" found.
+141 instances of "entrepreneurship" found.
+115 instances of "entrepreneurship" found.
+121 instances of "entrepreneurship" found.
+97 instances of "entrepreneurship" found.
+115 instances of "entrepreneurship" found.
+102 instances of "entrepreneurship" found.
+99 instances of "entrepreneurship" found.
+131 instances of "entrepreneurship" found.
+256 instances of "small-business" found.
+222 instances of "small-business" found.
+231 instances of "small-business" found.
+204 instances of "small-business" found.
+182 instances of "small-business" found.
+222 instances of "small-business" found.
+202 instances of "small-business" found.
+239 instances of "small-business" found.
+235 instances of "small-business" found.
+190 instances of "small-business" found.
+212 instances of "small-business" found.
+207 instances of "small-business" found.
+224 instances of "small-business" found.
+191 instances of "small-business" found.
+220 instances of "small-business" found.
+196 instances of "small-business" found.
+184 instances of "small-business" found.
+192 instances of "small-business" found.
+213 instances of "small-business" found.
+252 instances of "small-business" found.
+227 instances of "entrepreneurial" found.
+172 instances of "entrepreneurial" found.
+205 instances of "entrepreneurial" found.
+170 instances of "entrepreneurial" found.
+190 instances of "entrepreneurial" found.
+158 instances of "entrepreneurial" found.
+208 instances of "entrepreneurial" found.
+195 instances of "entrepreneurial" found.
+207 instances of "entrepreneurial" found.
+210 instances of "entrepreneurial" found.
+197 instances of "entrepreneurial" found.
+188 instances of "entrepreneurial" found.
+165 instances of "entrepreneurial" found.
+199 instances of "entrepreneurial" found.
+186 instances of "entrepreneurial" found.
+196 instances of "entrepreneurial" found.
+191 instances of "entrepreneurial" found.
+169 instances of "entrepreneurial" found.
+180 instances of "entrepreneurial" found.
+196 instances of "entrepreneurial" found.
+119 instances of "sba" found.
+197 instances of "sba" found.
+131 instances of "sba" found.
+150 instances of "sba" found.
+130 instances of "sba" found.
+96 instances of "sba" found.
+96 instances of "sba" found.
+102 instances of "sba" found.
+141 instances of "sba" found.
+159 instances of "sba" found.
+173 instances of "sba" found.
+113 instances of "sba" found.
+130 instances of "sba" found.
+106 instances of "sba" found.
+112 instances of "sba" found.
+146 instances of "sba" found.
+98 instances of "sba" found.
+72 instances of "sba" found.
+71 instances of "sba" found.
+110 instances of "sba" found.
+100 instances of "small-business-owners" found.
+71 instances of "small-business-owners" found.
+85 instances of "small-business-owners" found.
+91 instances of "small-business-owners" found.
+79 instances of "small-business-owners" found.
+87 instances of "small-business-owners" found.
+66 instances of "small-business-owners" found.
+74 instances of "small-business-owners" found.
+65 instances of "small-business-owners" found.
+74 instances of "small-business-owners" found.
+75 instances of "small-business-owners" found.
+78 instances of "small-business-owners" found.
+82 instances of "small-business-owners" found.
+77 instances of "small-business-owners" found.
+78 instances of "small-business-owners" found.
+71 instances of "small-business-owners" found.
+104 instances of "small-business-owners" found.
+87 instances of "small-business-owners" found.
+77 instances of "small-business-owners" found.
+101 instances of "small-business-owners" found.
+Saved topic: 1

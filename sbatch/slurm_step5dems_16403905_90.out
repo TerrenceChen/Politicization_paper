@@ -1,0 +1,202 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 90 -> topic: 221
+Processing topic: 221
+784 instances of "gambling" found.
+863 instances of "gambling" found.
+792 instances of "gambling" found.
+986 instances of "gambling" found.
+824 instances of "gambling" found.
+835 instances of "gambling" found.
+833 instances of "gambling" found.
+764 instances of "gambling" found.
+845 instances of "gambling" found.
+714 instances of "gambling" found.
+869 instances of "gambling" found.
+695 instances of "gambling" found.
+757 instances of "gambling" found.
+771 instances of "gambling" found.
+884 instances of "gambling" found.
+854 instances of "gambling" found.
+824 instances of "gambling" found.
+766 instances of "gambling" found.
+848 instances of "gambling" found.
+681 instances of "gambling" found.
+918 instances of "casino" found.
+846 instances of "casino" found.
+916 instances of "casino" found.
+1059 instances of "casino" found.
+822 instances of "casino" found.
+910 instances of "casino" found.
+901 instances of "casino" found.
+864 instances of "casino" found.
+945 instances of "casino" found.
+966 instances of "casino" found.
+989 instances of "casino" found.
+743 instances of "casino" found.
+849 instances of "casino" found.
+906 instances of "casino" found.
+903 instances of "casino" found.
+1064 instances of "casino" found.
+936 instances of "casino" found.
+914 instances of "casino" found.
+936 instances of "casino" found.
+823 instances of "casino" found.
+1204 instances of "las-vegas" found.
+1032 instances of "las-vegas" found.
+1065 instances of "las-vegas" found.
+1085 instances of "las-vegas" found.
+1012 instances of "las-vegas" found.
+1144 instances of "las-vegas" found.
+1050 instances of "las-vegas" found.
+1018 instances of "las-vegas" found.
+1186 instances of "las-vegas" found.
+1027 instances of "las-vegas" found.
+1130 instances of "las-vegas" found.
+989 instances of "las-vegas" found.
+1140 instances of "las-vegas" found.
+1102 instances of "las-vegas" found.
+1017 instances of "las-vegas" found.
+1167 instances of "las-vegas" found.
+1118 instances of "las-vegas" found.
+1143 instances of "las-vegas" found.
+1069 instances of "las-vegas" found.
+960 instances of "las-vegas" found.
+343 instances of "casinos" found.
+387 instances of "casinos" found.
+369 instances of "casinos" found.
+414 instances of "casinos" found.
+335 instances of "casinos" found.
+336 instances of "casinos" found.
+395 instances of "casinos" found.
+367 instances of "casinos" found.
+459 instances of "casinos" found.
+399 instances of "casinos" found.
+452 instances of "casinos" found.
+313 instances of "casinos" found.
+363 instances of "casinos" found.
+321 instances of "casinos" found.
+397 instances of "casinos" found.
+409 instances of "casinos" found.
+360 instances of "casinos" found.
+375 instances of "casinos" found.
+399 instances of "casinos" found.
+327 instances of "casinos" found.
+329 instances of "gaming" found.
+402 instances of "gaming" found.
+353 instances of "gaming" found.
+348 instances of "gaming" found.
+322 instances of "gaming" found.
+425 instances of "gaming" found.
+357 instances of "gaming" found.
+309 instances of "gaming" found.
+414 instances of "gaming" found.
+353 instances of "gaming" found.
+400 instances of "gaming" found.
+361 instances of "gaming" found.
+323 instances of "gaming" found.
+443 instances of "gaming" found.
+304 instances of "gaming" found.
+406 instances of "gaming" found.
+344 instances of "gaming" found.
+384 instances of "gaming" found.
+368 instances of "gaming" found.
+335 instances of "gaming" found.
+196 instances of "vegas" found.
+166 instances of "vegas" found.
+134 instances of "vegas" found.
+148 instances of "vegas" found.
+177 instances of "vegas" found.
+142 instances of "vegas" found.
+213 instances of "vegas" found.
+170 instances of "vegas" found.
+169 instances of "vegas" found.
+153 instances of "vegas" found.
+152 instances of "vegas" found.
+164 instances of "vegas" found.
+169 instances of "vegas" found.
+189 instances of "vegas" found.
+150 instances of "vegas" found.
+167 instances of "vegas" found.
+169 instances of "vegas" found.
+182 instances of "vegas" found.
+147 instances of "vegas" found.
+177 instances of "vegas" found.
+90 instances of "gamblers" found.
+102 instances of "gamblers" found.
+80 instances of "gamblers" found.
+120 instances of "gamblers" found.
+101 instances of "gamblers" found.
+85 instances of "gamblers" found.
+145 instances of "gamblers" found.
+118 instances of "gamblers" found.
+97 instances of "gamblers" found.
+107 instances of "gamblers" found.
+138 instances of "gamblers" found.
+90 instances of "gamblers" found.
+123 instances of "gamblers" found.
+96 instances of "gamblers" found.
+115 instances of "gamblers" found.
+87 instances of "gamblers" found.
+110 instances of "gamblers" found.
+111 instances of "gamblers" found.
+131 instances of "gamblers" found.
+77 instances of "gamblers" found.
+57 instances of "gambler" found.
+61 instances of "gambler" found.
+64 instances of "gambler" found.
+93 instances of "gambler" found.
+70 instances of "gambler" found.
+68 instances of "gambler" found.
+68 instances of "gambler" found.
+79 instances of "gambler" found.
+43 instances of "gambler" found.
+57 instances of "gambler" found.
+64 instances of "gambler" found.
+51 instances of "gambler" found.
+70 instances of "gambler" found.
+62 instances of "gambler" found.
+71 instances of "gambler" found.
+55 instances of "gambler" found.
+62 instances of "gambler" found.
+75 instances of "gambler" found.
+77 instances of "gambler" found.
+54 instances of "gambler" found.
+71 instances of "roulette" found.
+78 instances of "roulette" found.
+60 instances of "roulette" found.
+54 instances of "roulette" found.
+50 instances of "roulette" found.
+41 instances of "roulette" found.
+47 instances of "roulette" found.
+62 instances of "roulette" found.
+48 instances of "roulette" found.
+53 instances of "roulette" found.
+44 instances of "roulette" found.
+48 instances of "roulette" found.
+52 instances of "roulette" found.
+49 instances of "roulette" found.
+78 instances of "roulette" found.
+83 instances of "roulette" found.
+65 instances of "roulette" found.
+70 instances of "roulette" found.
+61 instances of "roulette" found.
+58 instances of "roulette" found.
+Saved topic: 221

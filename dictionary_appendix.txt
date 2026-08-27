@@ -1,0 +1,312 @@
+\section*{Animals}
+
+\textbf{Animal}: dog, animals, animal, dogs, bird, cat, birds, cats, pet, deer, zoo, pets, animal-control, owl, bats, pigs, humane-society, bat, tail, owls, rabies, animal-shelter, rats, fur, creatures, veterinarian, monkeys, feral, geese, panda, pit-bull, skunk, kennel, turkeys, veterinary, puppy, rooster, canine, squirrel, raccoon, coyote, rabbits
+
+\textbf{Marine_Biology}: fish, fishing, waters, marine, salmon, species, fishermen, shark, crabs, aquarium, trout, oyster, oysters, sharks, seals, chesapeake-bay, coral, fisheries, perch, whale, reef, crab, bait, anglers, bluefish, tuna, algae, rockfish, flounder, turtles, lobsters, dolphin, striped-bass, spawning, catfish, oceanic, clams, octopus, goldfish, shellfish, shad, squid, swordfish
+
+\textbf{Wildlife}: forest, alaska, conservation, lands, wildlife, forests, environmentalists, habitat, forest-service, wilderness, timber, wolves, arctic, wetlands, endangered-species, audubon, logging, environmental-groups, grouse, ecology, conservationists, grazing, ecological, wildlife-refuge, ranchers, alaskan, habitats, ecosystems
+
+\section*{Creative Arts}
+
+\textbf{Art}: artist, painting, paintings, painted, portrait, sculpture, drawings, painter, abstract, photography, portraits, prints, picasso, canvas, retrospective, stella, landscapes, sculptor, gogh, matisse, photographic, calder, abstraction, painters, canvases, collage, warhol, degas, andy-warhol, collages, impressionist, vermeer, rothko, geometric, self-portrait, louvre, expressionist, monet
+
+\textbf{Broadway}: theater, broadway, musical, actors, shakespeare, productions, playwright, theatrical, costumes, onstage, staging, artistic-director, musicals, costume, previews, playwrights, troupe, mamet, sondheim, brantley, cabaret, hammerstein, macbeth, tony-award, neil-simon, actresses, folger, rehearsals, monologues
+
+\textbf{Classical_Music}: dance, opera, ballet, orchestra, dancers, concert, symphony, piano, composer, pianist, concerts, mozart, philharmonic, ensemble, conductor, bach, beethoven, composers, lincoln-center, soprano, classical-music, violinist, sonata, violin, recital, quartet, choreography, symphony-orchestra, repertory, carnegie-hall, concerto, tenor, danced, operas, cello, balanchine, metropolitan-opera, orchestras, tchaikovsky, orchestral, brahms, ballet-theater, schumann, choral
+
+\textbf{Fashion}: fashion, wear, designer, dress, shoes, designers, pants, leather, dresses, jeans, shirt, jacket, shirts, fabric, boots, jackets, sneakers, silk, coat, coats, runway, skirts, skirt, accessories, outfit, fabrics, socks, sweater, prada, wool, wardrobe, chic, gucci, sweaters, footwear, ralph-lauren, trousers, lace, denim, garment, vuitton, chanel, creative-director, dior, sleeves, sportswear, calvin-klein
+
+\textbf{Literature}: book, books, novel, writers, literary, authors, publishers, poetry, fiction, literature, novels, prose, memoir, poem, poems, novelist, bookstore, knopf, random-house, manuscript, poets, essays, hemingway, reviewer, bookstores, booksellers, doubleday, didion, novelists, manuscripts, bestseller
+
+\textbf{Movie}: disney, entertainment, hollywood, studios, sony, paramount, streaming, box-office, blockbuster, marvel, warner-bros, walt-disney, dvd, animation, walt-disney-co, motion-picture, star-wars, paramount-pictures, pixar, spider-man, film, movie, films, movies, documentary, actor, actress, starring, script, cinema, filmmakers, filmmaker, screenplay, film-festival, filming, thriller, sundance, cinematic, documentaries, sequel, screenwriter, scorsese, subtitles, academy-award, sci-fi, cannes, filmmaking, keaton, niro, costner
+
+\textbf{Museum}: museum, art, artists, exhibition, gallery, exhibit, museums, galleries, smithsonian, curator, artifacts, exhibitions, exhibits, collections, collectors, metropolitan-museum, sculptures, art-museum, contemporary-art, national-gallery, artwork, modern-art, ceramics, fine-arts, curators, national-endowment, moma, hirshhorn, smithsonian-institution, sculpture-garden, art-gallery, artworks, nea, permanent-collection, watercolors, mixed-media
+
+\textbf{Music}: band, album, songs, song, jazz, guitar, musicians, blues, albums, lyrics, sing, hip-hop, solo, bands, cd, guitarist, rap, sings, drums, rapper, songwriter, beatles, saxophonist, vocals, bluegrass, guitars, ballad, melody, grammy, melodies, pop-music, rock-n-roll, saxophone, fender, acoustic, singer-songwriter, ballads, harmonies, vocalist, reggae
+
+\section*{Crime and Policing}
+
+\textbf{Burglary}: stolen, residence, robbed, residence-entered, burglary, break-in, robbers
+
+\textbf{Criminal}: trial, prosecutors, jury, convicted, indictment, testimony, testified, jurors, guilty, defendants, prosecution, pleaded-guilty, defendant, witnesses, conspiracy, sentenced, verdict, courtroom, prosecutor, indicted, testify, grand-jury, sentencing, district-attorney, pleaded, felony, federal-prosecutors, acquitted, defense-lawyers, juror, racketeering, found-guilty, conspiring, defense-attorneys, indictments, juries, bribery, plead-guilty, prosecuting, district-attorney-office, guilty-plea, extortion, perjury, cross-examination, prison-sentence, bribe, witness-stand, wire-fraud
+
+\textbf{CriminalJustice}: prison, jail, prisoners, inmates, rape, sentence, punishment, prisons, death-penalty, detention, execution, sentences, inmate, parole, prisoner, offenders, guards, detainees, torture, criminal-justice, sexual-assault, correctional, criminals, offenses, probation, detained, raped, jails, imprisoned, incarcerated, murders, executions, rikers, pardon, imprisonment, incarceration, offender, prosecuted, clemency, behind-bars, prosecutions, violent-crime, felons, raping
+
+\textbf{Homicide}: incident, medical-examiner, stabbed, slaying, autopsy, fatally-shot, stabbing, second-degree-murder, coroner, first-degree-murder, assailant, attempted-murder, slayings, gunshot-wound
+
+\textbf{Investigation}: allegations, investigators, fbi, investigations, inquiry, probe, f.b.i, investigated, federal-bureau, misconduct, criminal-charges, affidavit, criminal-investigation, allegation, laundering, bribes, fbi-agents, informant, independent-counsel, special-prosecutor, criminal-complaint
+
+\textbf{Police}: police, officers, police-officers, police-department, police-officer, detective, patrol, policing, detectives, d.c-police, cops, nypd, police-departments, homicide, troopers, precinct, internal-affairs, police-commissioner, uniformed, racial-profiling, homicides, law-enforcement-agencies, dispatcher
+
+\section*{Economic Issues}
+
+\textbf{Agriculture}: farm, farmers, corn, agriculture, farms, farmer, agricultural, crop, meat, milk, crops, dairy, grain, wheat, beef, usda, farming, cow, cattle, cows, agriculture-department, growers, harvest, chickens, genetically-modified, poultry, perdue, monsanto, hog, hogs, livestock, deere, acreage, bushels, oats, calves, soy, manure
+
+\textbf{Business}: business, entrepreneurs, small-businesses, entrepreneurship, small-business, entrepreneurial, sba, small-business-owners
+
+\textbf{Economics}: economists, commerce-department, annual-rate, consumer-spending, retail-sales, chief-economist, unemployment-rate, consumer-confidence, price-index, durable-goods, gross-domestic-product, personal-income, payrolls, housing-starts, year-over-year, jobless-rate, cpi, jobless-claims, gnp
+
+\textbf{Economy}: recession, unemployment, economic-growth, stimulus, gdp, globalization, economic-recovery, stimulus-package, economic-advisers, recessions
+
+\textbf{Fiscal}: budget, cuts, fiscal, deficit, tax-cuts, deficits, surplus, tax-increases, spending-cuts, budget-deficit, budget-cuts, debt-ceiling, deficit-reduction, outlays, congressional-budget, debt-limit, cbo, balanced-budget, raise-taxes, budgetary, surpluses, raising-taxes
+
+\textbf{Labor}: union, labor, strike, unions, bargaining, pension, teamsters, uaw, concessions, afl-cio, labor-relations, unionized, picket, nonunion, collective-bargaining, nlrb, organized-labor, walkout, auto-workers, machinists, wage-increases, strikers, steelworkers, cost-of-living
+
+\textbf{MonetaryPolicy}: fed, inflation, federal-reserve, yields, central-bank, interest-rate, monetary-policy, greenspan, bond-market, money-supply, central-banks, bond-prices, bond-yields, short-term-interest-rates, federal-reserve-bank, inflation-rate, borrowing-costs, treasury-bonds, inflationary, 10-year-treasury, federal-funds, inflationary-pressures
+
+\textbf{Taxation}: tax, taxes, irs, capital-gains, income-tax, deduction, ira, deductions, internal-revenue, income-taxes, taxation, taxed, tax-code, tax-breaks, deduct, tax-reform, tax-returns, iras, i.r.s, deductible, taxing, tax-deferred, adjusted-gross-income, depreciation, taxable-income, brackets, filers, roth-ira, excise
+
+\textbf{Trade}: steel, imports, tariffs, exports, export, import, aluminum, imported, tariff, trade-deficit, quotas, trade-representative, nafta, steelmaker, exporters, steelmakers, supply-chains, free-trade, raw-materials, exporting, protectionism, protectionist, gatt, wto, alcoa, exporter
+
+\textbf{Welfare & Poverty}: homeless, welfare, poverty, disabled, shelter, disability, disabilities, shelters, homelessness, neediest-cases, food-stamps, handicapped, needy, mentally-ill, legal-aid, catholic-charities, homeless-families, welfare-reform, social-worker, welfare-recipients, safety-net, wheelchairs
+
+\textbf{Workers}: workers, employees, jobs, employers, employee, hiring, employer, wages, workplace, layoffs, minimum-wage, workforce, unemployed, labor-department, human-resources, labor-force, sick-leave, furloughs, low-wage, laid-off
+
+\section*{Education}
+
+\textbf{Education}: school, students, schools, teachers, teacher, public-schools, math, classroom, elementary, middle-school, grades, classrooms, educators, kindergarten, school-districts, instruction, charter-schools, curriculum, principals, test-scores, charter-school, elementary-schools, mathematics, classmates, graders, after-school, class-sizes, physical-education, pupils, preschool, vouchers, junior-high, tutoring, superintendents, pta
+
+\textbf{Higher_Education}: college, student, campus, colleges, universities, graduate, academic, tuition, faculty, graduates, admissions, higher-education, professors, alumni, scholarships, campuses, graduation, semester, financial-aid, undergraduate, graduating, faculty-members, undergraduates, liberal-arts, ivy-league, freshmen, commencement, uc, cuny, vocational, regents, provost, hazing
+
+\section*{Environment}
+
+\textbf{Air Pollution}: tobacco, epa, smoking, chemical, cigarette, toxic, asbestos, smoke, cigarettes, cleanup, environmental-protection-agency, hazardous, contamination, ozone, e.p.a, tobacco-companies, air-quality, pesticides, contaminated, hazards, superfund, pesticide, pollutants, wastes, air-pollution, lung-cancer, sludge, soot
+
+\textbf{ClimateChange}: climate, climate-change, emissions, solar, carbon, global-warming, pollution, renewable-energy, carbon-dioxide, fossil-fuels, clean-energy, power-plants, clean-air, warming, recycling, sustainability, fossil-fuel, solar-panels, methane, greenhouse-gases, esg, renewable, carbon-emissions, greenhouse-gas, greenhouse-gas-emissions, hydropower, coal-fired, greenhouse, gases, emit
+
+\textbf{Disaster}: storm, hurricane, earthquake, storms, winds, flooding, hurricanes, flooded, fema, emergency-management, debris, quake, evacuation, tornado, floods, tropical-storm, tornadoes, earthquakes, rescuers, evacuees, noaa, death-toll
+
+\textbf{Weather}: cloudy, degrees, rain, temperature, sunny, temperatures, showers, weather-service, partly-cloudy, thunderstorms, humid, humidity, partly-sunny, cooler, heat-wave, fahrenheit, precipitation, windy, meteorologist, temp
+
+\textbf{Wildfires}: fire, fires, firefighters, burning, fire-department, flames, wildfire, blaze, wildfires, firefighter, evacuated, explosions, fatalities, evacuate
+
+\section*{Financial Market}
+
+\textbf{Bankruptcy}: bankruptcy, bankruptcy-court, reorganization, bankruptcy-protection, bankruptcy-code, reorganization-plan, bankruptcies, bankruptcy-filing, bankruptcy-law, debtors, debtor, bankruptcy-proceedings, defaulted, involuntary
+
+\textbf{Banks}: bank, banks, banking, bankers, deposits, fdic, thrift, citigroup, wells-fargo, financial-institutions, jpmorgan, citicorp, j.p-morgan, thrifts, depositors, federal-deposit-insurance, bancorp, deutsche-bank, bankamerica, banking-system, citibank, pnc, hsbc, wachovia, chase-manhattan, home-loan, citi, bank-holding-company, deposit-insurance, citigroup-inc, bank-holding, savings-loan-association, nonperforming
+
+\textbf{Commodity_Market}: futures, commodity, inventories, new-york-mercantile-exchange, soybean, cocoa, speculators, futures-prices, soybeans, commodity-markets, price-increases, chicago-mercantile-exchange, bearish, futures-contracts
+
+\textbf{Corporate}: shareholders, merger, stake, takeover, shareholder, tender-offer, buyout, icahn, buffett, takeovers, stockholders, takeover-bid, berkshire, leveraged-buyout, berkshire-hathaway, buy-out, revlon, proxy-fight, suitor, recapitalization, hostile-takeover, kravis-roberts, poison-pill, kravis
+
+\textbf{CorporateFinance}: acquisition, acquire, common-shares, common-stock, shares-outstanding, closely-held, preferred-stock, debentures, holding-company, common-shares-outstanding, initial-public-offering, definitive-agreement, preferred-shares, corporate-purposes, public-offering, buyback, quarterly-dividend, debenture
+
+\textbf{Earnings}: cents, earnings, year-earlier, net-income, fourth-quarter, third-quarter, second-quarter, net-loss, revenue-rose, first-quarter, pretax, quarter-ended, operating-profit, continuing-operations, net-profit, second-quarter-earnings, year-earlier-quarter, analysts-expectations, fourth-quarter-earnings, per-share-earnings, diluted-share, profit-rose, first-quarter-earnings, analysts-estimates, profit-fell, fourth-quarter-net-income, pre-tax, year-ago-period, cents-per-share, third-quarter-results
+
+\textbf{ExecutiveCompensation}: compensation, salary, bonus, bonuses, ceos, severance, stock-options
+
+\textbf{Financial}: brokers, trades, traders, morgan-stanley, merrill, nyse, stock-exchange, brokerage, exchanges, nasdaq, merrill-lynch, ipo, brokerage-firm, trader, investment-banking, brokerage-firms, schwab, derivatives, arbitrage, volatility, merrill-lynch-co, stock-index, cboe, securities-dealers, trading-volume, underwriting, cme, charles-schwab, brokerages, commodity-futures-trading, initial-public-offerings
+
+\textbf{Foreign_exchange}: dollar, currency, yen, euro, currencies, foreign-exchange, francs, japanese-yen, swiss-francs, british-pound, commodity-exchange, frankfurt, devaluation, comex, swiss-franc, franc, peso
+
+\textbf{Investing}: portfolio, mutual-funds, hedge-funds, mutual-fund, portfolios, hedge-fund, pension-funds, asset-management, etf, etfs, morningstar, blackrock, emerging-markets, money-managers, pension-fund, fund-managers, exchange-traded, reits, bond-funds, portfolio-manager, capital-management, valuations, individual-investors, emerging-market, junk-bonds, fixed-income, reit, fidelity-investments, redemptions, bull-market, money-management, msci
+
+\textbf{Money_Markets}: deposit, certificates, treasury-bills, libor, prime-rate, commercial-paper, posted-yields, telerate, commercial-banks, discount-rate, treas, cds, commercial-paper-placed-directly, eurodollars, repurchase, interbank-offered, london-interbank-offered, treasury-notes, secondary-market, depository, lending-practices, c.d
+
+\textbf{Retail}: stores, store, retailers, retail, retailer, sears, wal-mart, merchandise, chains, macy, department-stores, apparel, same-store, grocery, retailing, kmart, walmart, nordstrom, wal-mart-stores, home-depot, costco, catalog, supermarkets, merchandising, malls, groceries, kohl, lowe, kroger, roebuck, mart, drugstore, j.c-penney, in-store, zale, supermarket-chain, checkout, department-store, k-mart, penney
+
+\textbf{Securities}: sec, accounting, exchange-commission, enron, audit, s.e.c, tyco, insider-trading, worldcom, auditors, ebbers, auditor, financial-statements, audits, skilling, accountants, deloitte, kpmg, accounting-firm, bdo, auditing, fasb, restatement, securities-fraud, corporate-governance
+
+\textbf{Stock_market}: stocks, dow-jones-industrial-average, dow, stock-market, nasdaq-composite-index, standard-poor-500-stock, dow-industrials, blue-chip, nasdaq-composite, dow-jones-industrials, gainers, index-rose, vix, industrials, decliners, industrial-average, russell-index, composite-index, selloff, corporate-profits, investment-strategist, s-p-index, 10-year-treasury-note
+
+\section*{Food & Drinks}
+
+\textbf{Beverage}: brands, brand, coke, patent, coca-cola, pepsi, packaging, patents, beverage, pepsico, soft-drink, bottling, bottlers, soft-drinks, cola
+
+\textbf{Culinary}: chef, menu, chicken, sauce, dishes, salad, cooking, cheese, meal, chocolate, soup, fried, vegetables, grilled, dish, pork, potatoes, shrimp, sandwich, steak, lamb, seafood, chefs, dessert, flavor, lobster, entrees, delicious, cuisine, culinary, appetizers, roast, sandwiches, desserts, spicy, roasted, toast, noodles, baked, sausage, salads, mushrooms, yogurt, brunch, spinach, peppers, chili, veal, creamy
+
+\textbf{Dining}: restaurant, restaurants, mcdonald, coffee, starbucks, dining, fast-food, grill, chipotle, diners, diner, cafes, taco, brew, deli, burgers, zagat, takeout, fries, applebee, dine, steakhouse, bagel, cream-cheese, dining-rooms
+
+\textbf{Wine}: wine, beer, wines, bottle, drink, bottles, liquor, winery, grapes, tasting, grape, spirits, vineyard, vineyards, champagne, chardonnay, brewing, flavors, pinot-noir, liquors, beers, chateau, wine-spirits, burgundy, wineries, blanc, merlot, brewery, cork, drinkers, rum, bordeaux, sherry, chianti, sonoma, sauvignon-blanc, pinot, cabernet, tasted, acidity, reds, tastings, winemaker, riesling, winemakers
+
+\section*{Foreign Affairs}
+
+\textbf{China}: china, chinese, beijing, hong-kong, taiwan, shanghai, mainland, xinjiang, chinese-communist-party, taipei, wuhan, peking
+
+\textbf{Espionage}: intelligence, cia, spy, classified, nsa, c.i.a, snowden, espionage, covert, spying, secrecy, intelligence-agencies, intelligence-committee, spies, wikileaks, classified-information, central-intelligence-agency, classified-documents, operatives, counterterrorism, clapper, leaking, briefings, intelligence-agency, encryption
+
+\textbf{Latin_America}: mexico, mexican, cuba, cuban, venezuela, garcia, argentina, castro, gonzalez, colombia, costa, puerto-rico, chavez, latin-america, latin-american, nicaragua, colombian, venezuelan, argentine, havana, panama, dominican-republic, peru, el-salvador, puerto-rican, cubans, ecuador, buenos, guatemala, santiago
+
+\textbf{MiddleEastConflict}: israel, israeli, palestinian, gaza, hamas, palestinians, arab, lebanon, egypt, middle-east, jerusalem, israelis, arafat, lebanese, beirut, egyptian, plo, cease-fire, arabs, palestine, aviv, hezbollah, cairo, israeli-military, gaza-strip, mideast, palestinian-authority, peace-talks, israeli-palestinian, albanian, syrians
+
+\textbf{Middle_East}: iraq, afghanistan, iraqi, syria, taliban, al-qaeda, afghan, islamic-state, pakistan, syrian, baghdad, libya, islamic, kabul, iraqis, pakistani, yemen, kurdish, sunni, saddam-hussein, bin-laden, insurgents, isis, libyan, kurds, insurgency, saddam, islamist, osama-bin-laden
+
+\textbf{Military}: army, pentagon, navy, veterans, soldiers, commander, marines, naval, defense-secretary, marine-corps, national-guard, sgt, armed-forces, sergeant, colonel, generals, commanders, infantry, armed-services, active-duty, joint-chiefs, military-personnel, mattis, rumsfeld, admiral, battalion, troop, westmoreland, regiment, brig, naval-academy, cadets, hagel, saigon, deployments, lt-col, barracks, maj-gen, aircraft-carrier, servicemen, squadron
+
+\textbf{NuclearArms}: nuclear, missiles, missile, nuclear-weapons, treaty, arms-control, cold-war, arsenal, chemical-weapons, warheads, disarmament, missile-defense, atomic, ballistic-missile, deterrence, ballistic-missiles, cruise-missiles, nonproliferation, trident, atomic-bomb
+
+\textbf{Russia & Ukraine}: russia, russian, ukraine, moscow, ukrainian, kyiv, russians, kremlin, ukrainians, eastern-ukraine, russian-forces, crimea, separatists, russian-invasion, north-atlantic-treaty
+
+\textbf{Terrorism}: terrorism, terrorist, terrorists, homeland-security, terrorist-attacks, cybersecurity, terrorist-attack, attackers, hijackers
+
+\section*{Gender and Family}
+
+\textbf{Abortion}: abortion, abortions, pregnancy, abortion-rights, pregnant, reproductive, planned-parenthood, roe, antiabortion, embryos, roe-v-wade, pro-life, anti-abortion, bans, birth-control, fetus, pregnancies, contraception, pro-choice, unborn, pregnant-women, embryonic, fetal, incest
+
+\textbf{Gender}: women, female, male, gender, sexual-harassment, feminist, harassment, sexually, masculinity, feminism, sexual-misconduct, sexism, masculine, sexist, feminine, feminists, macho, sexes
+
+\textbf{LGBTQ}: gay, transgender, same-sex, lesbian, homosexual, lgbtq, gay-rights, trans, homosexuals, queer, sexuality, homosexuality, gays, sexual-orientation, lesbians, gender-identity, equality, heterosexual, bisexual, lgbt, gay-marriage
+
+\textbf{Marriage}: marriage, wedding, couples, divorce, divorced, weddings, spouses, marry, romance, marriages, marital, honeymoon, husbands, married-couples, brides, divorces, unmarried
+
+\textbf{Parenting}: children, parents, child, kids, mothers, babies, infant, fathers, parenting, parental, infants, foster-care, moms, children-ages, child-abuse, pediatrics, adolescents, toddlers, dads, 6-year-old, motherhood, adhd, pediatricians, adoptive
+
+\section*{Gun}
+
+\textbf{Gun_Control}: gun, shooting, guns, firearms, gunman, shootings, rifle, gun-control, gun-violence, rifles, background-checks, handgun, massacre, pistol, firearm, nra, semiautomatic, sniper, handguns, gunfire, national-rifle-association, mass-shootings, mass-shooting, opened-fire, pistols, machine-guns, sandy-hook, gunshots
+
+\section*{Health}
+
+\textbf{Disease}: surgery, brain, symptoms, transplant, kidney, diagnosed, diagnosis, tissue, liver, blood-pressure, syndrome, diseases, breast-cancer, organ, organs, heart-disease, heart-attack, disorders, arthritis, cancers, asthma, illnesses, chemotherapy, parkinson, transplants, tumor, cardiovascular, cardiac, inflammation, neurological, hypertension, coronary, prostate-cancer, kidneys, clots, angioplasty, scans, tumors, blood-vessels, cardiologist, cancer-patients
+
+\textbf{Healthcare}: insurance, coverage, medicare, insurers, health-insurance, medicaid, premiums, insurer, insurance-companies, aetna, uninsured, insured, reinsurance, blue-cross, cigna, policyholders, unitedhealth, out-of-pocket, blue-shield, hmos, deductibles, long-term-care, insurance-coverage, health-care-costs, managed-care, single-payer, hmo, insurance-premiums, humana, reimbursements
+
+\textbf{Hospital}: hospital, medical, patients, doctors, hospitals, patient, doctor, physicians, physician, nurses, clinic, nurse, nursing-home, healthcare, nursing-homes, medical-care, dental, nursing, emergency-room, surgeons, surgical, outpatient, practitioners, hospice, intensive-care, primary-care, orthopedic, telehealth, paramedics, geriatric, internist, anesthesia, oncology, health-care-providers
+
+\textbf{MentalHealth}: depression, anxiety, mental-health, trauma, psychiatrist, therapist, psychologist, psychologists, empathy, psychiatrists
+
+\textbf{Nutrition}: foods, diet, fat, nutrition, obesity, calories, diabetes, insulin, supplements, protein, vitamin, weight-loss, overweight, dietary, vitamin-d, cholesterol, blood-sugar, diets, nutritional, obese, cereal, intake, sodium, fruits, vitamins, glucose, grams, calorie, fats, bran, caffeine, grains, oat, cereals, low-fat, sugary, nutrients, type-diabetes, calcium, peanut, allergy, fatty, additives, sugars, healthful, grapefruit, nutrient
+
+\textbf{Pharmaceuticals}: drugs, fda, pfizer, drug-administration, merck, pharmaceutical, pharmaceuticals, f.d.a, trials, pharmacy, medicines, treatments, prescription, medications, prescriptions, clinical-trials, side-effects, pill, biotech, azt, pharmaceutical-companies, prescription-drugs, pharmacies, biogen, genentech, alzheimer, astrazeneca, over-the-counter, eli-lilly, clinical-trial
+
+\textbf{Substance Abuse}: drug, marijuana, cocaine, alcohol, addiction, heroin, steroids, cannabis, opioid, addicts, overdose, narcotics, drug-abuse, fentanyl, cbd, steroid, addict, alcoholism, substances, opioids, substance-abuse, painkillers, alcoholics, rehab, trafficking, thc, methadone, sobriety, overdoses, drug-related
+
+\textbf{Vaccine}: vaccine, virus, aids, vaccines, flu, infected, infection, vaccination, cdc, hiv, infections, outbreak, disease-control, vaccinated, immune, viruses, epidemic, outbreaks, antibodies, measles, vaccinations, infectious-disease, influenza, variant, fauci, infectious-diseases, c.d.c, h.i.v, variants, contagious, immune-system, unvaccinated, aids-virus, antibody, public-health, smallpox
+
+\section*{Home}
+
+\textbf{Cooking}: salt, pepper, tablespoons, butter, teaspoon, recipe, garlic, cups, oven, tomatoes, mixture, flour, olive-oil, chopped, tablespoon, baking, beans, onion, skillet, lemon, pasta, cooked, recipes, parsley, bake, boil, minced, freshly-ground, simmer, onions, tomato, spoon, black-pepper, grated, teaspoons, sprinkle, basil, tofu, peeled, eggplant, thyme, garnish, lemon-juice, saucepan
+
+\textbf{Home}: kitchen, furniture, bedrooms, living-room, bathrooms, bathroom, dining-room, fireplace, renovated, ceilings, furnishings, cabinets, fireplaces, furnished, tub, amenities, flooring, tiles, decorating, ikea, interior-designer, wallpaper, foyer, closets, hardwood, staircase
+
+\textbf{Household}: plastic, carpet, cardboard, towels, fibers, stain, dryer, cleaners, gel, stains, polyester, acrylic
+
+\section*{Housing}
+
+\textbf{Architecture}: tower, architecture, floors, towers, architects, architectural, elevator, exterior, stairwell
+
+\textbf{Housing}: rent, apartments, rental, homeowners, tenants, condominium, co-op, rents, hud, builders, landlords, tenant, landlord, condo, builder, affordable-housing, realtors, renters, renting, home-builders, two-bedroom, condominiums, co-ops, single-family, urban-development, rentals, homeownership, condos, one-bedroom, single-family-homes, eviction, apartment-buildings, complexes, dwellings, townhouses
+
+\textbf{Mortgage}: loans, mortgage, loan, mortgages, lenders, borrowers, lending, lender, fannie-mae, freddie-mac, subprime, freddie, fannie, foreclosure, borrowing, refinance, borrower, foreclosures, refinancing, fha, appraisal, monthly-payments, mortgage-rates, countrywide, defaults, repayment, home-equity, mortgage-backed-securities, 30-year-fixed, appraisals, appraisers, fixed-rate, refinanced
+
+\textbf{Urban_development}: developers, developer, square-feet, zoning, renovation, square-foot, redevelopment, mixed-use, high-rise, rezoning, land-use, lofts, multifamily, shopping-centers, walkable
+
+\section*{Infrastructure}
+
+\textbf{Electricity}: plant, utility, utilities, electricity, edison, reactor, grid, nuclear-power, transmission, reactors, uranium, nuclear-plant, pepco, electric-power, generators, power-plant, nuclear-power-plant, seabrook, blackout, outage, nuclear-power-plants, outages, generator, megawatts, turbines, hydroelectric
+
+\textbf{Energy}: oil, gas, energy, gasoline, natural-gas, petroleum, pipeline, drilling, exxon, oil-prices, barrel, opec, shell, crude, exploration, chevron, texaco, ethanol, barrels, bp, refinery, mobil, million-barrels, refining, crude-oil, shale, refineries, pennzoil, refiners, fuels, pipelines, fracking, gasoline-prices, arco, exxon-mobil, gas-prices, amoco, rigs, unocal, royal-dutch-shell, petroleum-exporting-countries
+
+\textbf{Postal_service}: mail, postal-service, postal, stamp, stamps, mailing, mailed, envelope, p.o, postage, postmaster, mailbox
+
+\textbf{Telecommunications}: cable, wireless, telecommunications, verizon, telecom, fcc, sprint, cellular, long-distance, mci, comcast, motorola, broadband, time-warner, qwest, nokia, communications-commission, cable-television, bell-atlantic, cablevision, wi-fi, ericsson, bellsouth, cable-tv, t-mobile, fiber-optic, lucent, nextel, sbc, cisco, 5g, nynex, 3g, cable-operators, ameritech, verizon-wireless, mobile-phone, nortel
+
+\textbf{Water}: snow, ice, drought, freezing, dam, pipes, sewer, sewage, reservoir, frigid, basin, dams, drinking-water, reservoirs, melting, moisture, snowstorm, downstream
+
+\section*{Legal Institution}
+
+\textbf{Constitution_Law}: amendment, statute, first-amendment, statutes, constitutionality, equal-protection
+
+\textbf{Judicial}: judge, ruling, appeals, judges, courts, appeals-court, federal-judge, upheld, circuit-court, appellate, district-judge, federal-appeals-court, rulings, unconstitutional, court-ruling, injunction, federal-courts, court-ruled, three-judge, supreme-court-ruled, judge-ruled, oral-arguments
+
+\textbf{Lawsuit}: suit, settlement, lawsuit, lawsuits, litigation, sued, plaintiffs, damages, antitrust, ftc, attorneys, district-court, settlements, arbitration, alleges, suing, class-action, lawsuit-filed, suit-filed, plaintiff, punitive-damages, legal-fees, attorneys-general, trade-commission, filed-suit, defamation, trial-lawyers, deposition, libel, restitution, eeoc, tort, suit-alleges, class-action-lawsuit, f.t.c, consent-decree
+
+\textbf{SupremeCourt}: justice, supreme-court, roberts, justices, judicial, constitution, confirmation, constitutional, scalia, ginsburg, clarence-thomas, kavanaugh, judge-kavanaugh, judiciary, confirmation-hearings, precedents, jurisprudence, senate-judiciary-committee, constitutional-right, federalism
+
+\section*{Leisure}
+
+\textbf{Festival}: festival, parade, fireworks, gala, festivities, ceremonies, festivals, fest
+
+\textbf{Gaming}: gambling, casino, las-vegas, casinos, gaming, vegas, gamblers, gambler, roulette
+
+\textbf{Horticulture}: garden, tree, trees, flowers, flower, planted, leaf, seeds, varieties, roses, planting, gardeners, bulbs, bees, foliage, gardening, gardener, bulb, insect, blooms, flowering, blossoms, pollen, shrubs, watering, grasses, seedlings, botanic, blooming, compost, botanical
+
+\textbf{Nature}: route, lake, mountain, trail, ski, mountains, trails, hike, hiking, skiing, canyon, skis, skiers, slopes, fir, cliffs, camping, vail, skier
+
+\textbf{TravelIndustry}: hotel, travel, hotels, travelers, resort, rooms, hilton, marriott, tourism, spa, hospitality, traveler, booked, resorts, tourist, motel, lodging, booking, occupancy, hyatt, bookings, hotel-rooms, alamo, inns, ritz-carlton, itinerary, spas, check-in, concierge, wyndham
+
+\section*{Media}
+
+\textbf{Journalism}: magazine, newspaper, editor, reporter, newspapers, publisher, journalists, journalism, readers, editors, magazines, articles, publications, publishing, editorial, circulation, tribune, managing-editor, front-page, newsweek, herald, newsroom, news-organizations, daily-news, tabloid, journalistic, usa-today, gannett, correspondents, sports-illustrated, newsday, chicago-tribune, pulitzer, editorial-page, pulitzer-prize, boston-globe, inquirer
+
+\textbf{Radio}: radio, tape, stations, broadcasting, tapes, radio-stations, broadcasters, clear-channel, radio-station, broadcasts, broadcaster, airwaves, cassette
+
+\textbf{TV_Entertainment}: episode, comedy, episodes, hbo, comedian, premiere, pbs, stand-up, podcast, executive-producer, late-night, sitcom, showtime, reality-tv, comedians, bravo, emmy, premieres, tv-shows, satire, co-star
+
+\textbf{Television}: network, cbs, nbc, abc, viewers, broadcast, cnn, anchor, nielsen, prime-time, msnbc, mtv, cbs-news, nbc-news, wb, telecast, viewer, couric, anchors, brokaw, viewership, on-air, koppel, miniseries
+
+\section*{Outer Space}
+
+\textbf{Space}: earth, nasa, moon, shuttle, mars, rocket, planet, astronauts, spacecraft, orbit, satellites, space-station, apollo, space-shuttle, astronaut, capsule, jupiter, rockets, rover, planets, telescope, lunar, astronomers, comet, aeronautics, observatory, orbital, astronomy, orbiting, planetary, propulsion, capsules, voyager, comets
+
+\section*{Politics}
+
+\textbf{Campaigns & Donors}: donors, donations, contributions, donated, fund-raising, campaigns, lobbying, donor, donation, charities, campaign-finance, donate, lobbyists, foundations, fundraising, pac, fund-raiser, fec, pacs, super-pac, donating, campaign-contributions, fund-raisers
+
+\textbf{Elections}: election, voters, voting, votes, ballot, elections, ballots, voter, voting-rights, turnout, recount, referendum, voter-registration, electoral, electoral-votes, mail-in, absentee, electors, precincts, balloting, election-results, voter-fraud, suppression, electoral-college, voting-rights-act, canvassing, term-limits, exit-polls
+
+\textbf{Protest}: protest, protesters, protests, activists, demonstrations, demonstrators, peaceful, riot, activism, protesting, free-speech, tear-gas, police-brutality, racial-justice, marchers, protester
+
+\textbf{PublicOpinion}: survey, poll, respondents, surveys, surveyed, polling, polled, pew, gallup, pew-research, registered-voters, pollsters, approval-rating, quinnipiac
+
+\textbf{Senate}: bill, senate, legislation, senator, senators, bipartisan, veto, majority-leader, caucus, senate-majority-leader, filibuster, amendments, committee-chairman, senate-floor, minority-leader, earmarks, congressional-leaders, appropriations-committee, republican-senators, senate-finance-committee, democratic-caucus
+
+\section*{Race and Immigration}
+
+\textbf{Confederate}: monument, confederate, slaves, monuments, gettysburg, confederacy
+
+\textbf{Immigration}: immigration, border, immigrants, migrants, citizenship, immigrant, refugees, asylum, visas, migration, border-patrol, illegal-immigrants, migrant, refugee, deportation, haitian, asylum-seekers, undocumented, southern-border, undocumented-immigrants, deported, border-protection, illegal-immigration, cbp, haitians, passports, naturalization, immigration-reform, customs-enforcement, deport, smugglers, illegal-aliens, dhs, unaccompanied
+
+\textbf{Minority}: diversity, hispanic, discrimination, minorities, ethnic, affirmative-action, latino, hispanics, latinos, asians, disparities, ethnicity, minority-groups, civil-rights-act, discriminated, underrepresented
+
+\textbf{Native_American}: indian, indians, tribes, tribal, tribe, reservation, native-american, native-americans, indigenous, sioux, navajo
+
+\textbf{Racial}: black, blacks, african-american, racial, civil-rights, whites, racism, african-americans, racist, slavery, slave, reparations, negro, martin-luther-king-jr, racially, naacp, segregated, segregation, civil-rights-movement, klan, desegregation, farrakhan, klux, enslaved, busing, jesse-jackson, sharpton, predominantly-black, black-owned, confederate-flag, lynching, malcolm-x, africans, supremacist
+
+\section*{Religion}
+
+\textbf{Catholicism}: church, pope, churches, catholic, rev, pastor, bishop, vatican, cardinal, holy, priest, archdiocese, bishops, priests, baptist-church, congregation, gospel, parish, benedict, archbishop, catholics, diocese, catholic-church, clergy, paul-ii, nuns, roman-catholic, parishioners, pope-john, pastors, pope-francis, parishes, jesus-christ, papal, sermons, congregations, theological, communion, roman-catholic-church
+
+\textbf{Religion}: religious, jewish, christian, god, religion, jews, muslim, bible, rabbi, prayer, muslims, jesus, christians, islam, evangelical, synagogue, orthodox, secular, prayers, christianity, biblical, evangelicals, judaism, mosque, hebrew, jew, jewish-community, religious-freedom, yiddish, rabbis, buddhist, religions, religious-beliefs, anti-semitism, passover, monks, faith-based, ultra-orthodox, spirituality, mosques, protestants
+
+\section*{Science}
+
+\textbf{Science}: scientists, scientific, cells, gene, dna, genetic, genes, laboratory, biological, bacteria, biology, physics, mice, genetics, proteins, genome, molecules, genetically, evolutionary, molecular, einstein, rna, biologists, human-genome, organisms, hypothesis, nobel-prize, physicists, biologist, microbes, mutations, bacterium
+
+\section*{Sports}
+
+\textbf{Baseball}: baseball, major-league-baseball, mlb, ballpark, umpires, babe-ruth, yankees, mets, innings, orioles, pitcher, inning, pitching, pitched, home-runs, starter, red-sox, major-league, pitchers, pitches, catcher, homer, bullpen, fastball, phillies, braves, reliever, homers, rbi, spring-training, hitter, batters, mound, blue-jays, white-sox, right-hander, batting, two-run, homered
+
+\textbf{Boxing}: boxing, ali, tyson, wrestling, boxer, bout, heavyweight, punches, jab, muhammad-ali, welterweight, bouts, boxers, wrestler, knockout
+
+\textbf{CollegeSports}: coaches, ncaa, freshman, coaching, notre-dame, acc, n.c.a.a, virginia-tech, big-ten, ohio-state, college-football, ncaa-tournament, head-coach, athletic-director, clemson, coached, penn-state, college-basketball, rutgers, athletics, football-coach, championship-game, assistant-coach, u.c.l.a, wake-forest, basketball-coach, villanova, hokies, men-basketball, tar-heels, georgia-tech, atlantic-coast-conference, collegiate-athletic-association, krzyzewski, jayhawks, coach-mike, longhorns, student-athletes
+
+\textbf{Golf}: golf, hole, holes, tee, golfers, pga-tour, greens, putt, golf-course, golf-club, birdie, strokes, tiger-woods, birdies, bogey, golfer, pga, final-round, fairway, ryder-cup, putts, birdied
+
+\textbf{NBA}: nba, knicks, nets, lakers, warriors, n.b.a, bulls, celtics, pistons, clippers, 76ers, golden-state, spurs, suns, point-guard, mavericks, bucks, nuggets, pacers, wnba, eastern-conference, basketball-association, los-angeles-lakers, arenas, boston-celtics, mvp
+
+\textbf{NFL}: redskins, nfl, quarterback, jets, super-bowl, linebacker, cowboys, raiders, rams, chiefs, eagles, wide-receiver, n.f.l, ravens, cornerback, browns, 49ers, packers, nfc, quarterbacks, preseason, afc, chargers, steelers, colts, tight-end, defensive-end, dolphins, green-bay, sacks, offensive-line, titans, training-camp, broncos, bengals, linemen, tackles
+
+\textbf{NHL}: scored, capitals, rangers, islanders, hockey, puck, devils, nhl, goalie, saves, defenseman, third-period, flyers, penguins, goaltender, n.h.l, stanley-cup, bruins, power-play, canadiens, red-wings, blackhawks, washington-capitals, shutout, oilers, sabres, maple-leafs, messier, gretzky, national-hockey-league, canucks, shootout, goalies
+
+\textbf{Soccer}: soccer, world-cup, mls, midfielder, fifa, goalkeeper, soccer-team, striker, midfield, fc
+
+\textbf{Tennis}: tennis, tournament, singles, wimbledon, doubles, semifinals, grand-slam, quarterfinals, tournaments, quarterfinal, racket, defending-champion, backhand, tiebreaker, forehand
+
+\section*{Transportation}
+
+\textbf{Airline}: airlines, airline, airport, flight, plane, flights, planes, aircraft, boeing, pilots, delta, carrier, carriers, aviation, airports, pilot, jet, continental, faa, routes, american-airlines, airplane, federal-aviation-administration, international-airport, usair, united-airlines, us-airways, airways, flown, airplanes, f.a.a, delta-air-lines, twa, air-traffic, flight-attendants, british-airways, airline-industry, concorde, northwest-airlines, o'hare
+
+\textbf{Automotive}: ford, gm, chrysler, vehicles, auto, toyota, general-motors, auto-makers, auto-maker, honda, g.m, volkswagen, automotive, nissan, auto-industry, ford-motor-co, general-motors-corp, vw, motors, automakers, chevrolet, sport-utility, car-makers, mitsubishi, iacocca, audi, electric-vehicles, hyundai, volvo, automaker, dealership, diesel, fiat, ford-motor, saturn, pickups, mazda, mulally, dealerships, toyota-motor, pontiac, minivans, evs, jeep
+
+\textbf{Maritime}: ship, boat, ships, boats, cruise, aboard, vessels, vessel, coast-guard, cargo, maritime, sailing, yacht, ports, submarine, voyage, dock, sailor, sailors, seas, tanker, battleship, sailed, hull, crew-members, cruises, wharf, submarines, cruise-ship, shipbuilding, uss, yachts, shipyard, sails, skipper, strait, destroyer, barge, shippers
+
+\textbf{Mass_Transit}: metro, bus, transit, subway, trains, buses, commuters, ridership, metrorail, commuter, mta, transit-authority, m.t.a, transit-system, metropolitan-transportation-authority, metrobus, commute, mass-transit, light-rail, subways, streetcar
+
+\textbf{Railroad}: train, railroad, rail, amtrak, penn, railroads, freight, csx, railway, union-pacific, norfolk-southern, conrail, burlington-northern, derailment, locomotive, railways
+
+\textbf{Traffic}: traffic, bridge, highway, lanes, parking, toll, bridges, highways, congestion, beltway, motorists, pedestrians, tolls, roadway, rush-hour, expressway, potholes, intersections, traffic-congestion, roadways, ramps, interchange, transportation-authority, parking-spaces
+
+\textbf{Transportation}: car, cars, driver, driving, drivers, engine, taxi, wheel, wheels, bmw, mileage, brake, brakes, mercedes, horsepower, towing, taxis, suv, steering-wheel, cadillac, dashboard, sedan, minivan, ferrari, porsche, air-bags, acceleration, seat-belt, subaru, cabs, drunken-driving, hummer, chevy, highway-traffic, seat-belts, m.p.h, chassis, lexus, miles-per-gallon
+

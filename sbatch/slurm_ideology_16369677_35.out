@@ -1,0 +1,201 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Task 35 -> topic: 87
+1268 instances of "tower" found.
+1236 instances of "tower" found.
+1216 instances of "tower" found.
+1197 instances of "tower" found.
+1220 instances of "tower" found.
+1442 instances of "tower" found.
+1184 instances of "tower" found.
+1281 instances of "tower" found.
+1264 instances of "tower" found.
+1178 instances of "tower" found.
+1144 instances of "tower" found.
+1154 instances of "tower" found.
+1215 instances of "tower" found.
+1269 instances of "tower" found.
+1132 instances of "tower" found.
+1286 instances of "tower" found.
+1414 instances of "tower" found.
+1021 instances of "tower" found.
+1107 instances of "tower" found.
+1095 instances of "tower" found.
+741 instances of "architecture" found.
+884 instances of "architecture" found.
+862 instances of "architecture" found.
+915 instances of "architecture" found.
+952 instances of "architecture" found.
+805 instances of "architecture" found.
+902 instances of "architecture" found.
+898 instances of "architecture" found.
+826 instances of "architecture" found.
+921 instances of "architecture" found.
+929 instances of "architecture" found.
+842 instances of "architecture" found.
+850 instances of "architecture" found.
+927 instances of "architecture" found.
+914 instances of "architecture" found.
+878 instances of "architecture" found.
+871 instances of "architecture" found.
+790 instances of "architecture" found.
+847 instances of "architecture" found.
+937 instances of "architecture" found.
+744 instances of "floors" found.
+849 instances of "floors" found.
+910 instances of "floors" found.
+879 instances of "floors" found.
+899 instances of "floors" found.
+871 instances of "floors" found.
+744 instances of "floors" found.
+934 instances of "floors" found.
+902 instances of "floors" found.
+756 instances of "floors" found.
+876 instances of "floors" found.
+941 instances of "floors" found.
+886 instances of "floors" found.
+821 instances of "floors" found.
+957 instances of "floors" found.
+753 instances of "floors" found.
+815 instances of "floors" found.
+861 instances of "floors" found.
+843 instances of "floors" found.
+829 instances of "floors" found.
+553 instances of "towers" found.
+524 instances of "towers" found.
+641 instances of "towers" found.
+582 instances of "towers" found.
+535 instances of "towers" found.
+604 instances of "towers" found.
+608 instances of "towers" found.
+565 instances of "towers" found.
+590 instances of "towers" found.
+564 instances of "towers" found.
+595 instances of "towers" found.
+637 instances of "towers" found.
+558 instances of "towers" found.
+604 instances of "towers" found.
+525 instances of "towers" found.
+563 instances of "towers" found.
+548 instances of "towers" found.
+561 instances of "towers" found.
+618 instances of "towers" found.
+614 instances of "towers" found.
+537 instances of "architects" found.
+562 instances of "architects" found.
+462 instances of "architects" found.
+554 instances of "architects" found.
+579 instances of "architects" found.
+518 instances of "architects" found.
+590 instances of "architects" found.
+543 instances of "architects" found.
+507 instances of "architects" found.
+576 instances of "architects" found.
+568 instances of "architects" found.
+531 instances of "architects" found.
+588 instances of "architects" found.
+496 instances of "architects" found.
+526 instances of "architects" found.
+559 instances of "architects" found.
+514 instances of "architects" found.
+503 instances of "architects" found.
+528 instances of "architects" found.
+529 instances of "architects" found.
+512 instances of "architectural" found.
+529 instances of "architectural" found.
+544 instances of "architectural" found.
+563 instances of "architectural" found.
+613 instances of "architectural" found.
+510 instances of "architectural" found.
+519 instances of "architectural" found.
+544 instances of "architectural" found.
+478 instances of "architectural" found.
+535 instances of "architectural" found.
+587 instances of "architectural" found.
+514 instances of "architectural" found.
+524 instances of "architectural" found.
+502 instances of "architectural" found.
+561 instances of "architectural" found.
+511 instances of "architectural" found.
+551 instances of "architectural" found.
+499 instances of "architectural" found.
+555 instances of "architectural" found.
+537 instances of "architectural" found.
+392 instances of "elevator" found.
+420 instances of "elevator" found.
+408 instances of "elevator" found.
+465 instances of "elevator" found.
+414 instances of "elevator" found.
+432 instances of "elevator" found.
+376 instances of "elevator" found.
+478 instances of "elevator" found.
+473 instances of "elevator" found.
+427 instances of "elevator" found.
+456 instances of "elevator" found.
+459 instances of "elevator" found.
+458 instances of "elevator" found.
+554 instances of "elevator" found.
+466 instances of "elevator" found.
+422 instances of "elevator" found.
+363 instances of "elevator" found.
+415 instances of "elevator" found.
+426 instances of "elevator" found.
+447 instances of "elevator" found.
+271 instances of "exterior" found.
+321 instances of "exterior" found.
+298 instances of "exterior" found.
+300 instances of "exterior" found.
+309 instances of "exterior" found.
+305 instances of "exterior" found.
+282 instances of "exterior" found.
+289 instances of "exterior" found.
+317 instances of "exterior" found.
+309 instances of "exterior" found.
+315 instances of "exterior" found.
+287 instances of "exterior" found.
+329 instances of "exterior" found.
+323 instances of "exterior" found.
+318 instances of "exterior" found.
+249 instances of "exterior" found.
+278 instances of "exterior" found.
+308 instances of "exterior" found.
+284 instances of "exterior" found.
+354 instances of "exterior" found.
+59 instances of "stairwell" found.
+50 instances of "stairwell" found.
+51 instances of "stairwell" found.
+61 instances of "stairwell" found.
+56 instances of "stairwell" found.
+59 instances of "stairwell" found.
+47 instances of "stairwell" found.
+56 instances of "stairwell" found.
+78 instances of "stairwell" found.
+67 instances of "stairwell" found.
+54 instances of "stairwell" found.
+67 instances of "stairwell" found.
+53 instances of "stairwell" found.
+58 instances of "stairwell" found.
+87 instances of "stairwell" found.
+54 instances of "stairwell" found.
+69 instances of "stairwell" found.
+56 instances of "stairwell" found.
+57 instances of "stairwell" found.
+58 instances of "stairwell" found.
+Saved topic: 87
