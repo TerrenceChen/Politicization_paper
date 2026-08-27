@@ -43,7 +43,7 @@ Alternatively, researchers could also email tdmstudio@clarivate.com to access my
 
 ## Pipeline
 
-The analysis is a sequential pipeline of R notebooks (R 4.2.3, `sample-r-2025.02.6` kernel). 
+The analysis is a sequential pipeline from R notebooks in ProQuest TDM Studio (R 4.2.3, `sample-r-2025.02.6` kernel) to R files (R 4.5.1, after Step 3). 
 For Step 4, the original files for public opinion data can be downloaded from the ANES website: https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/.
 Each stage reads files written by the previous one:
 
