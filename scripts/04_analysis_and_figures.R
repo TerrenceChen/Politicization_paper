@@ -513,7 +513,7 @@ category_year %>%
        color = "Political Term") +
   theme(
     strip.text    = element_text(size = 20),
-    axis.text.y   = element_text(size = 15),
+    axis.text.y   = element_text(size = 15)
   )
 
 ggsave("politicization_fulltrend.png", height =20, width = 24)
