@@ -1,5 +1,3 @@
-# AppendixJ_HighFreq_comparison.R
-#
 # Standalone -- only requires the two Step3 output files below.
 #
 # Every figure is now a baseline-vs-robustness-check comparison rather than

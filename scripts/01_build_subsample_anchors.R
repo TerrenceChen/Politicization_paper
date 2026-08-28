@@ -42,7 +42,7 @@ conservative_noise_terms <- c(
   "investor", "investors"
 )
 liberal_patterns     <- c("liberal", "liberals", "liberalism", "liberal-leaning")
-conservative_patterns <- c("conservative", "conservatives", "conservativism", "conservative-leaning")
+conservative_patterns <- c("conservative", "conservatives", "conservatism", "conservative-leaning")
 
 lib_wv_subsamples <- lapply(1:20, function(n) {
   build_anchor_wv(subsampled_tokens[[n]], pattern = liberal_patterns, filter_terms = NULL)

@@ -1,4 +1,4 @@
-# 02_step5_anchor_dems.R
+# 07_step5_anchor_dems.R
 #
 # Builds the raw (ungrouped) anchor DEMs -- liberal, conservative, democrat,
 # republican -- with per-context text preserved, needed for AppendixF,

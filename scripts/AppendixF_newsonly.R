@@ -1,5 +1,3 @@
-# 05_appendixF_newsonly.R
-#
 # News-Only politicization score, using Step5's own cached raw DEM matrices
 # (ALC_dems/topic_*.rds, ALC_dems/anchors.rds) rather than recomputing embeddings.
 #

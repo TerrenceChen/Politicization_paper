@@ -118,7 +118,7 @@ dropped_terms <- c(
   "hostages", "netanyahu", "bosnia", "kosovo", "serbia", "tel",
   "abbas", "bosnian", "milosevic", "yugoslavia", "serbian", "serb",
   "serbs", "mubarak", "belgrade", "moslem", "yugoslav", "croatia",
-  "balkans",
+  "balkans", "albanian",
   ## ---- Topic 52 - Space ----
   "eclipse", "booster", "kong", "antenna", "volcanic", "crater",
   "milky", "star-trek", "volcano", "eruption",
@@ -186,7 +186,7 @@ dropped_terms <- c(
   "realty", "office-buildings", "trammell", "acres-zoned", "secaucus",
   # kept: "walkable"
   ## ---- Topic 101 - NHL ----
-  "playoff", "tampa-bay", "ovechkin", "edmonton", "2-0", "lundqvist",
+  "scored", "saves", "capitals", "playoff", "tampa-bay", "ovechkin", "edmonton", "2-0", "lundqvist",
   "3-2", "holtby", "anaheim", "backstrom", "kolzig", "esposito",
   "period-scoring", "winger", "ng", "scored-twice", "coyotes",
   ## ---- Topic 104 - Energy ----
@@ -217,7 +217,7 @@ dropped_terms <- c(
   "wallet", "pedestrian", "thefts-break-ins", "oct-property", "reported-missing", "information-call",
   "front-door", "males", "unlocked", "assaulted", "acquaintance", "gunpoint",
   "male-pedestrian", "area-thefts-break-ins", "among-incidents-reported", "unlocked-vehicle", "second-degree-assault", "laptop-computer",
-  "prying", "richmond-hwy", "robber", "rear-door", "rear-window",
+  "prying", "richmond-hwy", "robber", "rear-door", "rear-window", "residence-entered",
   ## ---- Topic 131 - Movie ----
   "viacom", "netflix", "theaters", "weinstein", "redstone", "iger",
   "lego", "vivendi", "diller", "dreamworks", "valenti", "mca",
@@ -238,7 +238,7 @@ dropped_terms <- c(
   "simpson", "hernandez", "spain", "lopez", "jose", "miguel",
   "rica", "gomez", "alvarez", "morales", "manuel", "sanchez",
   "ramos", "noriega", "hugo", "aires", "jorge", "maduro",
-  "padilla", "pedro",
+  "padilla", "pedro", "garcia", "gonzalez", "costa",
   ## ---- Topic 141 - Substance Abuse ----
   "drunk", "pills", "illicit", "traffickers", "needles", "purdue",
   "legalization", "clemens", "testosterone", "cartels", "canseco", "performance-enhancing",
@@ -277,8 +277,7 @@ dropped_terms <- c(
   ## ---- Topic 171 - Marriage ----
   "guggenheim", "jealousy",
   ## ---- Topic 172 - Catholicism ----
-  "worship", "choir", "protestant", "ministers", "mormon", "denomination",
-  "sermon", "theology", "latter-day", "missionary", "messiah",
+  "choir", "ministers", "denomination", "latter-day",
   ## ---- Topic 174 - Fiscal ----
   "unfunded", "darman",
   ## ---- Topic 176 - Railroad ----
@@ -380,7 +379,7 @@ dropped_terms <- c(
   # kept: "psychedelics", "alzheimer", "mdma"
   ## ---- Topic 229 - Dining ----
   "chinatown", "bartender", "domino", "waiters", "waiter", "grubhub",
-  "cocktails",
+  "cocktails", "zagat",
   ## ---- Topic 235 - Campaigns & Donors ----
   "charity", "charitable", "kaiser", "philanthropy", "nonprofits", "philanthropic",
   "soros", "bathgate", "messner",
@@ -393,7 +392,7 @@ dropped_terms <- c(
   ## ---- Topic 243 - Nutrition ----
   "milligrams", "msg",
   ## ---- Topic 249 - Nature ----
-  "clark", "scotch", "ranch", "shenandoah", "fraser", "blue-spruce",
+  "clark", "scotch", "ranch", "shenandoah", "fraser", "blue-spruce", "route", 
   ## ---- Topic 250 - Wildlife ----
   "acres", "watt", "landowners", "zinke", "tracts", "yellowstone",
   "anchorage", "interior-department", "interior-secretary",
@@ -477,7 +476,7 @@ dropped_terms <- c(
   ## ---- Topic 326 - Radio ----
   "stern", "listeners", "malone", "kramer", "murdoch", "univision",
   "sirius", "kili", "television-stations", "xm", "duct", "tv-stations",
-  "limbaugh", "imus", "landau", "iac",
+  "limbaugh", "imus", "landau", "iac", "clear-channel",
   ## ---- Topic 328 - Native_American ----
   "india", "du", "pont", "conoco", "delhi", "modi",
   "mead", "hindu", "seagram", "kashmir",
