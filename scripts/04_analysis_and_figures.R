@@ -4,7 +4,7 @@
 # combining per-topic checkpoint files from the job arrays, computing
 # politicization scores, regression models, and Figure 2-8 and H1.
 #
-# Requires: all_toks_ngram_0412.rds, Results_Files/dict_terms_final_0510.rds,
+# Requires: all_toks_ngram_0412.rds, Results_Files/dict_terms_final_0825.rds,
 # and the completed ALC_results_topic/ and ALC_results_party/ directories.
 
 library(conText)
