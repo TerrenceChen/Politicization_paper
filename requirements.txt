@@ -1,20 +1,18 @@
-# R package requirements for this pipeline (R 4.2.3, `sample-r-2025.02.6` kernel in ProQuest TDM Studio; R 4.5.1 after Step 3).
-# Install with: install.packages(c(<packages below, quoted>))
-# conText is not reliably on CRAN across R/package versions; if install.packages("conText") fails, use:
-#   remotes::install_github("prodriguezsosa/conText")
-# `parallel` is a base R package (ships with R) and needs no install step.
+# R package requirements for "Tracing Politicization in the U.S. Public Sphere, 1980-2024"
+#
+# The pipeline runs in two environments.
 
-broom
-conText
+
+# ===========================================================================
+# Steps 0-2 -- ProQuest TDM Studio
+# ===========================================================================
+# R 4.2.3, kernel `sample-r-2025.02.6`. These steps run inside the enclave;
+# selecting that kernel reproduces the package environment, so versions are
+# not pinned individually here.
+
 data.table
 dplyr
-gamm4
-ggplot2
-glue
-gridExtra
-ldatuning
-lme4
-lsa
+ldatuning            
 lubridate
 maps
 pacman
@@ -23,10 +21,50 @@ quanteda.textstats
 rvest
 SnowballC
 stringr
-texreg
-tibble
-tidyr
 tidytext
 topicmodels
-WGCNA
 xml2
+
+# install.packages(c("data.table","dplyr","ldatuning","lubridate","maps",
+#                    "pacman","quanteda","quanteda.textstats","rvest",
+#                    "SnowballC","stringr","tidytext","topicmodels","xml2"))
+
+
+# ===========================================================================
+# Steps 3-7 -- R 4.5.1 (2025-06-13), Ubuntu 24.04.3 LTS, x86_64
+# ===========================================================================
+# Versions below are those used to produce the reported results.
+
+broom
+conText            1.4.1
+data.table         1.17.8
+gamm4
+ggplot2            4.0.0
+glue               1.8.0
+gridExtra          2.3
+lme4               1.1-37
+lsa
+Matrix             1.7-4
+dplyr              1.1.4
+quanteda           4.3.1
+stringr            1.5.2
+texreg             1.40
+tibble             3.3.0
+tidyr              1.3.1
+WGCNA              1.73
+
+# install.packages(c("broom","conText","data.table","dplyr","gamm4","ggplot2",
+#                    "glue","gridExtra","lme4","lsa","quanteda","stringr",
+#                    "texreg","tibble","tidyr"))
+
+
+# --- Installation notes ---
+#
+# WGCNA depends on Bioconductor packages that install.packages() cannot
+# resolve. Install these first:
+#     install.packages("BiocManager")
+#     BiocManager::install(c("GO.db", "impute", "preprocessCore"))
+#     install.packages("WGCNA")
+#
+# lme4 and Matrix are ABI-coupled. If lme4 fails to load after a Matrix
+# upgrade, reinstall lme4 from source.

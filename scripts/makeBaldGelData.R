@@ -97,7 +97,8 @@ vec_issueVars <- c(vec_econissues, vec_civrissues, vec_moralissues, vec_frgnpiss
 ##########			MAIN CODE
 ##########
 
-dt_orig <- read.csv("/Users/macintosh/Downloads/anes_timeseries_cdf_csv_20260205/anes_timeseries_cdf_csv_20260205.csv")
+dt_orig <- read.csv("anes_timeseries_cdf_csv_20260205.csv") 
+## Need to download from ANES website: https://electionstudies.org/data-center/anes-time-series-cumulative-data-file/
 
 names(dt_orig) <- tolower(names(dt_orig))
 
