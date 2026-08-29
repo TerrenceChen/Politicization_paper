@@ -12,15 +12,37 @@ library(dplyr)
 library(stringr)
 library(ggplot2)
 library(tidyr)
+library(quanteda)
 
 dict_terms  <- readRDS("Results_Files/dict_terms_final_0825.rds")
 anchor_dems <- readRDS("ALC_dems/anchors.rds")
 
-NEWS_EXCLUDE_PATTERN <- "Commentary|Editorial|Review"
+# --- News-only sample sizes -------------------------------------------------
 
-group_dem_by_year_newsonly <- function(mat, docvars, exclude_pattern = NEWS_EXCLUDE_PATTERN) {
+NEWS_PATTERN <- "News|Article|Feature|Front Page|Cover Story"
 
-  keep    <- !str_detect(docvars$Type, exclude_pattern)
+all_toks_final <- readRDS("all_toks_ngram_0412.rds")
+
+set.seed(7)
+subsamples <- sample(1:20, size = ndoc(all_toks_final),
+                     replace = TRUE, prob = rep(0.05, times = 20))
+
+type_vec <- docvars(all_toks_final, "Type")
+is_news  <- !is.na(type_vec) & str_detect(type_vec, NEWS_PATTERN)
+
+subsample_sizes <- as.integer(table(factor(subsamples[is_news], levels = 1:20)))
+tau_news        <- sum(subsample_sizes)
+
+message("News-only corpus: ", tau_news, " articles (",
+        round(100 * tau_news / 1350000, 1), "% of the full sample)")
+
+
+# Focus on news only
+
+group_dem_by_year_newsonly <- function(mat, docvars, include_pattern = NEWS_PATTERN) {
+
+  keep    <- !is.na(docvars$Type) &
+              str_detect(docvars$Type, include_pattern)
   mat     <- mat[keep, , drop = FALSE]
   docvars <- docvars[keep, ]
 
@@ -30,11 +52,6 @@ group_dem_by_year_newsonly <- function(mat, docvars, exclude_pattern = NEWS_EXCL
   year_count <- table(docvars$Year)
   sweep(year_sum, 1, as.numeric(year_count[rownames(year_sum)]), "/")
 }
-
-subsample_sizes <- anchor_dems$liberal$docvars %>%
-  distinct(subsample, text_n) %>%
-  arrange(subsample) %>%
-  pull(text_n)
 
 build_newsonly_anchor_wv_subsamples <- function(anchor_name) {
   ad <- anchor_dems[[anchor_name]]
@@ -95,8 +112,8 @@ compute_term_metrics_newsonly <- function(t, term_data) {
     mutate(
       cos_liberal_avg = mean(cos_liberal, na.rm = TRUE),
       cos_con_avg     = mean(cos_con,     na.rm = TRUE),
-      error_lib = sqrt(text_n) * (cos_liberal - cos_liberal_avg) / sqrt(1350000),
-      error_con = sqrt(text_n) * (cos_con     - cos_con_avg)     / sqrt(1350000)
+      error_lib = sqrt(text_n) * (cos_liberal - cos_liberal_avg) / sqrt(tau_news),
+      error_con = sqrt(text_n) * (cos_con     - cos_con_avg)     / sqrt(tau_news)
     ) %>%
     summarise(
       cos_liberal_mean  = mean(cos_liberal, na.rm = TRUE),
@@ -155,8 +172,8 @@ compute_party_metrics_newsonly <- function(t, term_data) {
     mutate(
       cos_dem_avg = mean(cos_dem, na.rm = TRUE),
       cos_rep_avg = mean(cos_rep, na.rm = TRUE),
-      error_dem = sqrt(text_n) * (cos_dem - cos_dem_avg) / sqrt(1350000),
-      error_rep = sqrt(text_n) * (cos_rep - cos_rep_avg) / sqrt(1350000)
+      error_dem = sqrt(text_n) * (cos_dem - cos_dem_avg) / sqrt(tau_news),
+      error_rep = sqrt(text_n) * (cos_rep - cos_rep_avg) / sqrt(tau_news)
     ) %>%
     summarise(
       cos_dem_mean  = mean(cos_dem, na.rm = TRUE),

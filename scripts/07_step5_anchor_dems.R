@@ -44,7 +44,7 @@ build_anchor_dem_new <- function(toks_subsample, pattern, filter_terms = NULL) {
 
 liberal_patterns <- c("liberal", "liberals", "liberalism", "liberal-leaning")
 conservative_patterns <- c("conservative", "conservatives",
-                            "conservativism", "conservative-leaning")
+                            "conservatism", "conservative-leaning")
 conservative_noise_terms <- c(
   "estimate", "estimates", "projection", "projections",
   "forecast", "forecasts", "investment", "investments",
