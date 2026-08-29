@@ -1,11 +1,7 @@
-# Standalone -- only requires the two Step3 output files below.
+# Appendix J: Robustness to Term Frequency
 #
-# Every figure is now a baseline-vs-robustness-check comparison rather than
-# a single version:
-#   FigureJ1 / J2 / J3  -- Approach 1 (raise frequency threshold to >=100)
-#                           vs. the frequency>=10 baseline
-#   FigureJ4 / J5 / J6  -- Approach 2 (frequency-adjusted / residualized score)
-#                           vs. the raw baseline score, both on frequency>=10 data
+# Approach 1 (frequency-adjusted / residualized score) vs. the raw baseline score, both on frequency>=10 data
+# Approach 2 (raise frequency threshold to >=100)
 #
 # Requires:
 #   Results_Files/ALC_ideology_results_df.rds
@@ -87,95 +83,7 @@ results_df_party <- readRDS("Results_Files/ALC_party_results_df.rds") %>%
   select(term, year, topic, label, pol_score, pol_score_upper, pol_score_lower, group, frequency)
 
 # ======================================================================
-# APPROACH 1: raise minimum frequency threshold to >= 100
-# ======================================================================
-
-results_df_cat_baseline <- assign_category(bind_rows(results_df, results_df_party)) %>%
-  mutate(Threshold = "Frequency >= 10 (baseline)")
-
-results_df_cat_highfreq <- assign_category(
-  bind_rows(
-    filter(results_df, frequency >= 100),
-    filter(results_df_party, frequency >= 100)
-  )
-) %>%
-  mutate(Threshold = "Frequency >= 100")
-
-results_df_cat_thresh <- bind_rows(results_df_cat_baseline, results_df_cat_highfreq)
-
-## --- FigureJ1: overall trend, baseline vs high-frequency ---
-results_df_cat_thresh %>%
-  group_by(year, group, Threshold) %>%
-  summarise(value_avg = mean(pol_score, na.rm = TRUE), .groups = "drop") %>%
-  ggplot(aes(x = year, y = value_avg, color = Threshold)) +
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = "gam", se = FALSE) +
-  geom_vline(data = president, aes(xintercept = xintercepts), linetype = "dotted") +
-  scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
-  pres_scale +
-  facet_wrap(~ group) +
-  theme_classic() +
-  labs(x = "Year", y = "Politicization Score") +
-  guides(color = guide_legend(title = ""))
-
-ggsave("FigureJ1_politicization_overall_highfreq.png", width = 10, height = 5)
-
-## --- Category-level early vs. late, for both thresholds ---
-category_year_thresh <- results_df_cat_thresh %>%
-  group_by(year, Category, group, Threshold) %>%
-  summarise(
-    value_avg   = mean(pol_score,       na.rm = TRUE),
-    value_upper = mean(pol_score_upper, na.rm = TRUE),
-    value_lower = mean(pol_score_lower, na.rm = TRUE),
-    .groups = "drop"
-  )
-
-category_period_thresh <- category_year_thresh %>%
-  group_by(Category, group, Threshold) %>%
-  summarise(
-    late_value  = mean(value_avg[year >= 2015 & year <= 2024], na.rm = TRUE),
-    late_upper  = mean(value_upper[year >= 2015 & year <= 2024], na.rm = TRUE),
-    late_lower  = mean(value_lower[year >= 2015 & year <= 2024], na.rm = TRUE),
-    early_value = mean(value_avg[year >= 1980 & year <= 1989], na.rm = TRUE),
-    early_upper = mean(value_upper[year >= 1980 & year <= 1989], na.rm = TRUE),
-    early_lower = mean(value_lower[year >= 1980 & year <= 1989], na.rm = TRUE),
-    .groups = "drop"
-  )
-
-## --- FigureJ2: ideology, baseline vs high-frequency, faceted ---
-category_period_thresh %>%
-  filter(group == "ideology") %>%
-  ggplot(aes(y = reorder(Category, late_value))) +
-  geom_point(aes(x = late_value, color = "2015-2024 Average")) +
-  geom_errorbar(aes(xmin = late_lower, xmax = late_upper, color = "2015-2024 Average"), width = 0.3) +
-  geom_point(aes(x = early_value, color = "1980-1989 Average")) +
-  geom_errorbar(aes(xmin = early_lower, xmax = early_upper, color = "1980-1989 Average"), width = 0.3) +
-  scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
-  facet_wrap(~ Threshold) +
-  labs(x = "Politicization Score", y = "Issue Domains") +
-  guides(color = guide_legend(title = "Period")) +
-  theme_minimal(base_size = 11)
-
-ggsave("FigureJ2_politicization_ideo_HighFreq.png", width = 11, height = 7)
-
-## --- FigureJ3: party, baseline vs high-frequency, faceted ---
-category_period_thresh %>%
-  filter(group == "party") %>%
-  ggplot(aes(y = reorder(Category, late_value))) +
-  geom_point(aes(x = late_value, color = "2015-2024 Average")) +
-  geom_errorbar(aes(xmin = late_lower, xmax = late_upper, color = "2015-2024 Average"), width = 0.3) +
-  geom_point(aes(x = early_value, color = "1980-1989 Average")) +
-  geom_errorbar(aes(xmin = early_lower, xmax = early_upper, color = "1980-1989 Average"), width = 0.3) +
-  scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
-  facet_wrap(~ Threshold) +
-  labs(x = "Politicization Score", y = "Issue Domains") +
-  guides(color = guide_legend(title = "Period")) +
-  theme_minimal(base_size = 11)
-
-ggsave("FigureJ3_politicization_party_HighFreq.png", width = 11, height = 7)
-
-# ======================================================================
-# APPROACH 2: residualize on frequency, keep residuals (frequency-adjusted)
+# APPROACH 1: residualize on frequency, keep residuals (frequency-adjusted)
 # Both "Raw" and "Adjusted" here use the SAME frequency>=10 baseline data --
 # ======================================================================
 
@@ -229,7 +137,7 @@ results_df_cat_adj <- assign_category(
             results_df_party_raw_tagged, results_df_party_adj_tagged)
 )
 
-## --- FigureJ4: overall trend, raw vs frequency-adjusted ---
+## --- FigureJ1: overall trend, raw vs frequency-adjusted ---
 results_df_cat_adj %>%
   group_by(year, group, Adjustment) %>%
   summarise(value_avg = mean(value, na.rm = TRUE), .groups = "drop") %>%
@@ -240,11 +148,19 @@ results_df_cat_adj %>%
   scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
   pres_scale +
   facet_wrap(~ group) +
-  theme_classic() +
+  theme_classic(base_size = 22) +
+  theme(
+    strip.text   = element_text(size = 20),
+    legend.text  = element_text(size = 20),
+    axis.title   = element_text(size = 24),
+    axis.text    = element_text(size = 18),
+    axis.text.x  = element_text(size = 8)
+  ) +
   labs(x = "Year", y = "Politicization Score") +
   guides(color = guide_legend(title = ""))
 
-ggsave("FigureJ4_politicization_overall_freqadj.png", width = 10, height = 5)
+ggsave("Graphs/FigureJ1_politicization_overall_freqadj.png",
+       width = 13, height = 14, dpi = 300)
 
 ## --- Category-level early vs. late, raw vs adjusted ---
 category_year_adj <- results_df_cat_adj %>%
@@ -268,7 +184,29 @@ category_period_adj <- category_year_adj %>%
     .groups = "drop"
   )
 
-## --- FigureJ5: ideology, raw vs adjusted, faceted ---
+### Check what domains changed
+
+sig_flip <- category_period_adj %>%
+  mutate(
+    change      = late_value - early_value,
+    significant = late_lower > early_upper,
+    Adjustment  = recode(Adjustment, "Raw" = "raw", "Frequency-adjusted" = "adj")
+  ) %>%
+  select(Category, group, Adjustment, change, significant) %>%
+  pivot_wider(names_from = Adjustment, values_from = c(change, significant)) %>%
+  mutate(
+    flipped_to_ns = significant_raw & !significant_adj,
+    flipped_to_sig = !significant_raw & significant_adj,
+    pct_attenuation = round(100 * (1 - change_adj / change_raw), 1)
+  ) %>%
+  arrange(desc(flipped_to_ns), desc(pct_attenuation))
+
+mean(sig_flip$pct_attenuation)
+
+sig_flip %>% filter(flipped_to_ns | flipped_to_sig) %>%
+  select(Category, group, significant_raw, significant_adj, change_raw, change_adj, pct_attenuation)
+
+## --- FigureJ2: ideology, raw vs adjusted, faceted ---
 category_period_adj %>%
   filter(group == "ideology") %>%
   ggplot(aes(y = reorder(Category, late_value))) +
@@ -282,9 +220,9 @@ category_period_adj %>%
   guides(color = guide_legend(title = "Period")) +
   theme_minimal(base_size = 11)
 
-ggsave("FigureJ5_politicization_ideo_freqadjusted.png", width = 11, height = 7)
+ggsave("Graphs/FigureJ2_politicization_ideo_freqadjusted.png", width = 6.5, height = 7)
 
-## --- FigureJ6: party, raw vs adjusted, faceted ---
+## --- FigureJ3: party, raw vs adjusted, faceted ---
 category_period_adj %>%
   filter(group == "party") %>%
   ggplot(aes(y = reorder(Category, late_value))) +
@@ -298,4 +236,44 @@ category_period_adj %>%
   guides(color = guide_legend(title = "Period")) +
   theme_minimal(base_size = 11)
 
-ggsave("FigureJ6_politicization_party_freqadjusted.png", width = 11, height = 7)
+ggsave("Graphs/FigureJ3_politicization_party_freqadjusted.png", width = 6.5, height = 7)
+
+
+# ======================================================================
+# APPROACH 2: raise minimum frequency threshold to >= 100
+# ======================================================================
+
+results_df_cat_baseline <- assign_category(bind_rows(results_df, results_df_party)) %>%
+  mutate(Threshold = "Frequency >= 10 (baseline)")
+
+results_df_cat_highfreq <- assign_category(
+  bind_rows(
+    filter(results_df, frequency >= 100),
+    filter(results_df_party, frequency >= 100)
+  )
+) %>%
+  mutate(Threshold = "Frequency >= 100")
+
+results_df_cat_thresh <- bind_rows(results_df_cat_baseline, results_df_cat_highfreq)
+
+## --- Overall trend, baseline vs high-frequency ---
+results_df_cat_thresh %>%
+  group_by(year, group, Threshold) %>%
+  summarise(value_avg = mean(pol_score, na.rm = TRUE), .groups = "drop") %>%
+  ggplot(aes(x = year, y = value_avg, color = Threshold)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "gam", se = FALSE) +
+  geom_vline(data = president, aes(xintercept = xintercepts), linetype = "dotted") +
+  scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
+  pres_scale +
+  facet_wrap(~ group) +
+  theme_classic(base_size = 22) +
+  theme(
+    strip.text   = element_text(size = 20),
+    legend.text  = element_text(size = 20),
+    axis.title   = element_text(size = 24),
+    axis.text    = element_text(size = 18),
+    axis.text.x  = element_text(size = 8)
+  ) +
+  labs(x = "Year", y = "Politicization Score") +
+  guides(color = guide_legend(title = ""))

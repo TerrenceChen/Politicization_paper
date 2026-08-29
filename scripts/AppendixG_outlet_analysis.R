@@ -6,7 +6,8 @@
 #   ALC_dems/anchors.rds                     
 #   ALC_dems/topic_<n>.rds                    
 #   Results_Files/dict_terms_final_0825.rds
-#   freq_by_year_source.rds                  
+#   freq_by_year_source.rds   
+#   all_toks_ngram_0412.rds
 
 library(conText)
 library(quanteda)
@@ -21,70 +22,96 @@ library(texreg)
 anchor_dems <- readRDS("ALC_dems/anchors.rds")
 dict_terms  <- readRDS("Results_Files/dict_terms_final_0825.rds")
 
-subset_by_source <- function(term_data, source, year, reclassify_editorials = FALSE) {
 
-  if (reclassify_editorials) {
-    term_data$docvars$Type[str_detect(term_data$docvars$Type,
-                                      "Commentary|Editorial|Review")] <- "Editorial"
-    idx <- which(term_data$docvars$Source == source &
-                 term_data$docvars$Year == year &
-                 term_data$docvars$Type == "Editorial")
-  } else {
-      idx <- which(term_data$docvars$Source == source  &
-               term_data$docvars$Year == year)
-      }
+# Subsamples by News outlet
+all_toks_final <- readRDS("all_toks_ngram_0412.rds")
 
-  list(
-    matrix = term_data$matrix[idx, , drop = FALSE],
-    docvars = term_data$docvars[idx, ]
-  )
-}
+set.seed(7)
+subsamples <- sample(1:20, size = ndoc(all_toks_final),
+                     replace = TRUE, prob = rep(0.05, times = 20))
+source_vec <- docvars(all_toks_final, "Source")
+
+outlets <- c("New York Times", "The Washington Post", "Wall Street Journal")
+outlet_subsample_sizes <- setNames(lapply(outlets, function(src) {
+  as.integer(table(factor(subsamples[!is.na(source_vec) & source_vec == src], levels = 1:20)))
+}), outlets)
+outlet_tau <- sapply(outlet_subsample_sizes, sum)
+
+message(paste(outlets, round(100 * outlet_tau / 1350000, 1), "%", collapse = "; "))
+
 
 # ===================== All Articles by Outlet =====================
 
-cosine_calculate <- function(topic, source){
-
-    results <- list()
-
-    file_name <- paste0("ALC_dems/topic_", topic, ".rds")
-    topic_dem <- readRDS(file_name)
-
-    for (y in 1980:2024){
-        cor_lib <- c()
-        cor_con <- c()
-        cor_dem <- c()
-        cor_rep <- c()
-
-        topic_list <- lapply(topic_dem, subset_by_source, source = source, year = y, reclassify_editorials = FALSE)
-        anchor_list <- lapply(anchor_dems, subset_by_source, source = source, year = y, reclassify_editorials = FALSE)
-
-        for(i in 1:length(topic_list)){
-            if(length(topic_list[[i]]$matrix)==0) {
-                cor_lib[i] <- NA
-                cor_con[i] <- NA
-                cor_dem[i] <- NA
-                cor_rep[i] <- NA
-            } else{
-                cor_lib[i] <- lsa::cosine(colMeans(anchor_list$liberal$matrix), colMeans(topic_list[[i]]$matrix))
-                cor_con[i] <- lsa::cosine(colMeans(anchor_list$conservative$matrix), colMeans(topic_list[[i]]$matrix))
-                cor_dem[i] <- lsa::cosine(colMeans(anchor_list$democrat$matrix), colMeans(topic_list[[i]]$matrix))
-                cor_rep[i] <- lsa::cosine(colMeans(anchor_list$republican$matrix), colMeans(topic_list[[i]]$matrix))
-            }
-        }
-
-        results[[length(results) + 1]] <- data.frame(
-            term = names(topic_list),
-            year = as.integer(y),
-            cos_lib = cor_lib,
-            cos_con = cor_con,
-            cos_dem = cor_dem,
-            cos_rep = cor_rep
-        )
-    }
-
-    results_df <- do.call(rbind, results)
-    return(results_df)
+subset_by_source_subsample <- function(term_data, source, year, n) {
+  idx <- which(term_data$docvars$Source == source &
+                 term_data$docvars$Year   == year   &
+                 term_data$docvars$subsample == n)
+  list(matrix = term_data$matrix[idx, , drop = FALSE])
 }
+
+cosine_calculate <- function(topic, source){
+  
+  file_name <- paste0("ALC_dems/topic_", topic, ".rds")
+  topic_dem <- readRDS(file_name)
+  tau       <- outlet_tau[[source]]
+  sizes     <- outlet_subsample_sizes[[source]]
+  
+  results <- list()
+  
+  for (y in 1980:2024) {
+    for (term in names(topic_dem)) {
+      
+      row_out <- data.frame(term = term, year = y, subsample = 1:20,
+                            text_n = sizes,
+                            cos_lib = NA_real_, cos_con = NA_real_,
+                            cos_dem = NA_real_, cos_rep = NA_real_)
+      
+      for (n in 1:20) {
+        term_sub <- subset_by_source_subsample(topic_dem[[term]], source, y, n)
+        if (nrow(term_sub$matrix) == 0) next
+        
+        term_vec <- colMeans(term_sub$matrix)
+        
+        for (anchor in c("liberal", "conservative", "democrat", "republican")) {
+          anchor_sub <- subset_by_source_subsample(anchor_dems[[anchor]], source, y, n)
+          if (nrow(anchor_sub$matrix) == 0) next
+          anchor_vec <- colMeans(anchor_sub$matrix)
+          col <- switch(anchor, liberal = "cos_lib", conservative = "cos_con",
+                        democrat = "cos_dem", republican = "cos_rep")
+          row_out[[col]][n] <- as.numeric(lsa::cosine(anchor_vec, term_vec))
+        }
+      }
+      results[[length(results) + 1]] <- row_out
+    }
+  }
+  
+  do.call(rbind, results) %>%
+    group_by(term, year) %>%
+    mutate(
+      cos_lib_avg = mean(cos_lib, na.rm = TRUE), cos_con_avg = mean(cos_con, na.rm = TRUE),
+      cos_dem_avg = mean(cos_dem, na.rm = TRUE), cos_rep_avg = mean(cos_rep, na.rm = TRUE),
+      err_lib = sqrt(text_n) * (cos_lib - cos_lib_avg) / sqrt(tau),
+      err_con = sqrt(text_n) * (cos_con - cos_con_avg) / sqrt(tau),
+      err_dem = sqrt(text_n) * (cos_dem - cos_dem_avg) / sqrt(tau),
+      err_rep = sqrt(text_n) * (cos_rep - cos_rep_avg) / sqrt(tau)
+    ) %>%
+    summarise(
+      cos_lib = mean(cos_lib, na.rm = TRUE),
+      cos_lib_lower = cos_lib - quantile(err_lib, 0.95, na.rm = TRUE),
+      cos_lib_upper = cos_lib - quantile(err_lib, 0.05, na.rm = TRUE),
+      cos_con = mean(cos_con, na.rm = TRUE),
+      cos_con_lower = cos_con - quantile(err_con, 0.95, na.rm = TRUE),
+      cos_con_upper = cos_con - quantile(err_con, 0.05, na.rm = TRUE),
+      cos_dem = mean(cos_dem, na.rm = TRUE),
+      cos_dem_lower = cos_dem - quantile(err_dem, 0.95, na.rm = TRUE),
+      cos_dem_upper = cos_dem - quantile(err_dem, 0.05, na.rm = TRUE),
+      cos_rep = mean(cos_rep, na.rm = TRUE),
+      cos_rep_lower = cos_rep - quantile(err_rep, 0.95, na.rm = TRUE),
+      cos_rep_upper = cos_rep - quantile(err_rep, 0.05, na.rm = TRUE),
+      .groups = "drop"
+    )
+}
+
 
 nyt_cos <- lapply(unique(dict_terms$topic), cosine_calculate, source = "New York Times")
 nyt_cos_df <-  do.call(rbind, nyt_cos)
@@ -155,17 +182,25 @@ all_df_cat <-
            pol_score_party = (cos_dem + cos_rep)/2)
 
 freq_by_year_source <- readRDS("freq_by_year_source.rds")
-freq_by_year_source <- rename(freq_by_year_source, "year" = Year)
-freq_by_year_source$year = as.numeric(freq_by_year_source$year)
+freq_wide <- freq_by_year_source %>%
+  filter(term %in% dict_terms$term) %>%
+  mutate(year = as.numeric(Year)) %>%
+  select(term, year, Source, frequency) %>%
+  pivot_wider(names_from = Source, values_from = frequency, values_fill = 0)
 
-all_df_cat <-
-    all_df_cat %>%
-    left_join(freq_by_year_source, by= c("term", "year", "Source"))
+freq_wide <- freq_wide %>%
+  mutate(pooled     = `New York Times` + `The Washington Post` + `Wall Street Journal`,
+         min_outlet = pmin(`New York Times`, `The Washington Post`, `Wall Street Journal`))
+
+eligible_terms <- freq_wide %>%
+  filter(pooled >= 10, min_outlet >= 5) %>%
+  select(term, year)
+
+all_df_cat <- all_df_cat %>% semi_join(eligible_terms, by = c("term", "year"))
 
 # --- Compare Increase: regression by outlet ---
 results_df_cat_reg <-
    all_df_cat %>%
-   filter(frequency >=5) %>%
    group_by(year, label, Category, Source) %>%
    summarise(
     value_ideo_avg   = mean(pol_score_ideo,   na.rm = TRUE),
@@ -182,7 +217,7 @@ model_wsj <- lme4::lmer(value_ideo_avg ~ year0 + (year0|label),
                          data=subset(results_df_cat_reg, Source == "Wall Street Journal"))
 
 texreg(list(model_nyt, model_wp, model_wsj), digits = 4,
-       file = "outlet_models_ideo.tex")
+       file = "Tables/outlet_models_ideo.tex")
 
 modelP_nyt <- lme4::lmer(value_party_avg ~ year0 + (year0|label),
                          data=subset(results_df_cat_reg, Source == "New York Times"))
@@ -192,7 +227,7 @@ modelP_wsj <- lme4::lmer(value_party_avg ~ year0 + (year0|label),
                          data=subset(results_df_cat_reg, Source == "Wall Street Journal"))
 
 texreg(list(modelP_nyt, modelP_wp, modelP_wsj), digits = 4,
-       file = "outlet_models_party.tex")
+       file = "Tables/outlet_models_party.tex")
 
 # --- Graphs ---
 category_year <- all_df_cat %>%
@@ -245,7 +280,7 @@ category_year_ideo %>%
        y = "Issue Domains") +
   theme_minimal(base_size = 11)
 
-ggsave("FigureG1_newspaper_ideo_cat.png", width = 6.5, height = 7)
+ggsave("Graphs/FigureG1_newspaper_ideo_cat.png", width = 6.5, height = 7)
 
 category_year %>%
   group_by(Category, Source) %>%
@@ -277,6 +312,6 @@ category_year %>%
        y = "Issue Domains") +
   theme_minimal(base_size = 11)
 
-ggsave("FigureG2_newspaper_party_cat.png", width = 6.5, height = 7)
+ggsave("Graphs/FigureG2_newspaper_party_cat.png", width = 6.5, height = 7)
 
 message("AppendixG complete.")

@@ -322,7 +322,7 @@ results_df_cat_combined %>%
     labs(x = "Year", y = "Politicization Score") +
     guides(color = guide_legend(title = ""))
 
-ggsave("FigureF1_pol_trend_compare.png", width = 6.5, height =7)
+ggsave("Graphs/FigureF1_pol_trend_compare.png", width = 6.5, height =7)
 
 # --- Category-level early vs. late period (Figures 3/4 style) ---
 category_year <- results_df_cat_combined %>%
@@ -359,7 +359,7 @@ category_period %>%
   guides(color = guide_legend(title = "Period")) +
   theme_minimal(base_size = 11)
 
-ggsave("FigureF2_politicization_ideo_newsonly.png", width =6.5, height = 7)
+ggsave("Graphs/FigureF2_politicization_ideo_newsonly.png", width =6.5, height = 7)
 
 category_period %>%
   filter(group == "party") %>%
@@ -374,7 +374,7 @@ category_period %>%
   guides(color = guide_legend(title = "Period")) +
   theme_minimal(base_size = 11)
 
-ggsave("FigureF3_politicization_party_newsonly.png", width =6.5, height = 7)
+ggsave("Graphs/FigureF3_politicization_party_newsonly.png", width =6.5, height = 7)
 
 # --- Rank comparison ---
 compare_rank_order <- function(period_data, value_col, g) {
