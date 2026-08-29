@@ -193,7 +193,7 @@ combined_ideo %>%
   theme_minimal() +
   theme(legend.position = "bottom")
 
-ggsave("Figure9_politicization_comapre_ideo.png", width = 6.5, height =7)
+ggsave("Graphs/Figure9_politicization_comapre_ideo.png", width = 6.5, height =7)
 
 # --- Trends by issue: party ---
 combined_party <- combined %>%
@@ -254,4 +254,4 @@ combined_party %>%
   theme_minimal() +
   theme(legend.position = "bottom")
 
-ggsave("Figure10_politicization_comapre_party.png", width = 6.5, height =7)
+ggsave("Graphs/Figure10_politicization_comapre_party.png", width = 6.5, height =7)

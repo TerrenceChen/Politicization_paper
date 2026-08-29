@@ -2,7 +2,7 @@
 #
 # Everything after the two ALC embedding loops: term frequency counts,
 # combining per-topic checkpoint files from the job arrays, computing
-# politicization scores, regression models, and Figure 2-8 and H1.
+# politicization scores, regression models, and Figure 1-8 and H1.
 #
 # Requires: all_toks_ngram_0412.rds, Results_Files/dict_terms_final_0825.rds,
 # and the completed ALC_results_topic/ and ALC_results_party/ directories.
@@ -12,6 +12,8 @@ library(quanteda)
 library(dplyr)
 library(ggplot2)
 library(glue)
+library(tidyr)
+library(stringr)
 
 all_toks_final <- readRDS("all_toks_ngram_0412.rds")
 dict_terms <- readRDS("Results_Files/dict_terms_final_0825.rds")
@@ -19,8 +21,6 @@ dict_terms <- readRDS("Results_Files/dict_terms_final_0825.rds")
 dfm <-
     dfm(all_toks_final) %>%
     dfm_trim(min_termfreq = 500)
-
-library(tidyr)
 
 dfm_year <- dfm_group(dfm, 
                       groups = interaction(docvars(dfm, c("Year", "Source")), drop = TRUE))
@@ -34,17 +34,12 @@ freq_by_year <- dfm_year %>%
     values_to = "frequency"
   )
 
-head(freq_by_year)
-
-library(stringr)
 freq_by_year <-
   freq_by_year %>%
   mutate(
     Year = str_extract(doc_id, "\\d{4}"),
     Source = str_extract(doc_id, "(?<=\\.).*$")
   )
-
-head(freq_by_year)
 
 saveRDS(freq_by_year, "freq_by_year_source.rds")
 
@@ -184,7 +179,7 @@ for(cat in unique(topic_words$Category)) {
   
   latex_output <- c(
     latex_output,
-    glue("\\section*{{{cat}}}"),
+    glue("\\subsubsection*{{{cat}}}"),
     ""
   )
   
@@ -228,7 +223,7 @@ results_df_cat %>%
         plot.subtitle=element_text(size=18),
         strip.text = element_text(size = 15))
 
-ggsave("Figure1_vaccine_graph.png", width=6.5, height = 7)
+ggsave("Graphs/Figure1_vaccine_graph.png", width=6.5, height = 7)
 
 # ======================================================================
 # ### Overall Graph
@@ -262,7 +257,7 @@ results_df_cat %>%
           plot.subtitle=element_text(size=18), 
           strip.text = element_text(size = 15))
 
-ggsave("Figure2_26-08-26-politicization_overall.png")
+ggsave("Graphs/Figure2_26-08-26-politicization_overall.png", width=6.5, height = 7)
 
 
 # ======================================================================
@@ -278,8 +273,6 @@ results_df_cat_reg <-
     .groups = "drop"
   ) %>%
   mutate(year0 = year - 1980)
-
-length(unique(results_df_cat_reg$label))
 
 saveRDS(results_df_cat_reg, "Results_Files/results_df_label_combined.rds")
 
@@ -297,9 +290,8 @@ model_ideo_quad  <- lme4::lmer(value_avg ~ year0 + I(year0^2) + (year0|label),
 model_party_quad <- lme4::lmer(value_avg ~ year0 + I(year0^2) + (year0|label),
                                 data = subset(results_df_cat_reg, group == "party"))
 
-library(texreg)
 texreg(list(model_ideo_quad, model_party_quad), digits = 4,
-       file = "26-08-26-models_quadratic.tex")
+       file = "Tables/26-08-26-models_quadratic.tex")
 
 category_year <- results_df_cat %>%
   group_by(year, Category, group) %>%
@@ -318,13 +310,13 @@ category_year <- results_df_cat %>%
 results_df_cat_reg <-
     results_df_cat_reg %>%
     group_by(label, group) %>%
-    mutate(high_pol = case_when(mean(value_avg[year >= 1980 & year <= 1989], na.rm = TRUE) >= 0.2 ~ "High (>0.2)",
-                                mean(value_avg[year >= 1980 & year <= 1989], na.rm = TRUE) <= 0.15 ~ "Low (<0.15)",
+    mutate(high_pol = case_when(mean(value_avg[year >= 1980 & year <= 1989], na.rm = TRUE) >= 0.2 ~ "High (≥0.2)",
+                                mean(value_avg[year >= 1980 & year <= 1989], na.rm = TRUE) <= 0.15 ~ "Low (≤0.15)",
                                 TRUE ~ "Medium (0.15-0.2)")) %>%
     ungroup() 
 
 results_df_cat_reg %>%
-    filter(year >= 1989) %>%
+    filter(year >= 1990) %>%
     group_by(high_pol, year, group) %>%
     summarise(value_avg = mean(value_avg, na.rm=TRUE)) %>%
     ungroup() %>%
@@ -343,7 +335,7 @@ results_df_cat_reg %>%
     theme(plot.title = element_text(size= 20), 
           plot.subtitle=element_text(size=18))
 
-ggsave("Figure3_politicization_overall_strat_new.png")
+ggsave("Graphs/Figure3_politicization_overall_strat_new.png", width = 6.5, height = 7)
 
 
 # ======================================================================
@@ -403,7 +395,7 @@ category_year %>%
           plot.subtitle=element_text(size=18), 
           strip.text = element_text(size = 15))
 
-ggsave("Figure4_politicization_cat_period_ideo.png", width =6.5, height = 7)
+ggsave("Graphs/Figure4_politicization_cat_period_ideo.png", width =6.5, height = 7)
 
 category_year %>%
   group_by(Category) %>%
@@ -438,15 +430,13 @@ category_year %>%
           plot.subtitle=element_text(size=18), 
           strip.text = element_text(size = 15))
 
-ggsave("Figure5_politicization_cat_period_party.png", width = 6.5, height = 7)
+ggsave("Graphs/Figure5_politicization_cat_period_party.png", width = 6.5, height = 7)
 
 
 # ======================================================================
-# ### Graph - Change over Time
+# ### Graph - Change over Time (Not used in paper)
 # ======================================================================
 ## Correlation between two trends
-
-library(tidyr)
 
 cor_results <- category_year %>%
   select(year, Category, group, value_avg) %>%
@@ -520,7 +510,7 @@ ggsave("politicization_fulltrend.png", height =20, width = 24)
 
 
 # ======================================================================
-# ## Topic Level Graphs
+# ## Topic Level Graphs (Not used in paper)
 # ======================================================================
 graph_topic <- function(g){
 
@@ -597,7 +587,7 @@ results_df_cat_reg %>%
          color = guide_legend(title = "")) +
   theme_bw(base_size = 11)
 
-ggsave("Figure6_politicization_lifestyle_period.png", height = 6.5, width= 7)
+ggsave("Graphs/Figure6_politicization_lifestyle_period.png", height = 6.5, width= 7)
 
 results_df_cat_reg %>%
   filter(Category %in% c("Creative Arts", "Media", "Sports", "Food & Drinks")) %>%
@@ -628,7 +618,10 @@ results_df_cat_reg %>%
          color = guide_legend(title = "")) +
   theme_bw(base_size = 11)
 
-ggsave("Figure7_politicization_lifestyle_period_party.png", height = 6.5, width= 7)
+ggsave("Graphs/Figure7_politicization_lifestyle_period_party.png", height = 6.5, width= 7)
+
+
+### Detailed time trends (not used in paper)
 
 graph_topic_full <- function(cat){
 
@@ -637,8 +630,6 @@ model_lab_1 <- lme4::lmer(value_avg ~ year0 + (year0 | label),
 
 model_lab_2 <- lme4::lmer(value_avg ~ year0 + (year0 | label), 
                         data = results_df_cat_reg  %>% filter(group == "party" & Category %in% cat))
-
-### Extract category-specific slopes
 
 label_intercept_1 <- coef(model_lab_1)$label %>%
   tibble::rownames_to_column("label") %>%
@@ -652,7 +643,6 @@ label_intercept_2 <- coef(model_lab_2)$label %>%
   rename("slope" = year0)  %>%
   mutate(group = "party")
 
-## presidential inauguration year
 president <- data.frame(xintercepts = c(1981, 1989, 1993, 2001, 2009, 2017, 2021))
 
 results_df_cat_reg  %>% 
@@ -717,11 +707,11 @@ results_df_cat %>%
   scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
   labs(x = "Politicization Score",
        y = "Term") +
-  guides(shape = guide_legend(title = "Cateogry"),
+  guides(shape = guide_legend(title = "Category"),
          color = guide_legend(title = "Period")) +
   theme_bw(base_size = 11)
 
-ggsave("Figure8_lifestyle_term.png", width = 6.5, height = 7)
+ggsave("Graphs/Figure8_lifestyle_term.png", width = 6.5, height = 7)
 
 
 ## Appendix H: Select Top 5 Terms
@@ -734,7 +724,6 @@ lifestyle_label <-
 
 top_terms <- 
     dict_terms %>%
-    filter(!term %in% c("zagat", "clear-channel")) %>% ## not present in both periods
     filter(label %in% lifestyle_label) %>%
     group_by(label) %>%
     slice_max(order_by = ratio , n=5) %>%
@@ -762,10 +751,10 @@ results_df_cat %>%
   geom_errorbar(aes(xmin = early_lower, xmax = early_upper, color = "1980-1989 Average"), width = 0.3) +
   scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
   labs(x = "Politicization Score",
-       y = "Term") +
-  guides(shape = guide_legend(title = "Cateogry"),
+       y = "Topic") +
+  guides(shape = guide_legend(title = "Category"),
          color = guide_legend(title = "Period")) +
   theme_bw(base_size = 11)
 
-ggsave("FigureH1_lifestyle_terms_top5.png", width = 6.5, height = 7)
+ggsave("Graphs/FigureH1_lifestyle_terms_top5.png", width = 6.5, height = 7)
 

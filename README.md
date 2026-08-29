@@ -56,7 +56,7 @@ Each stage reads files written by the previous one:
 | 4 | `makeBaldGelData.R`, `05_step4_opinion_mapping.R` | `results_with_domains.rds` | Compare public opinion trends with politicization trends | No (can run with `Results_Files/results_df_label_combined.rds`) |
 | 5 | `06_step5_topic_dems_task.R`, `07_step5_anchor_dems.R` | `glove.rds`, `khodakA.rds` | Re-runs Step3's ALC embedding pipeline but saves the raw per-term DEMs | No (can run with the derived `all_toks_ngram_0412.rds` file) |
 | 6 | `08_step5_closereading.R` | NA | Helpers with close reading | No |
-| 7 | `AppendixF_newsonly.R`, `AppendixG_outlet_analysis.R`, `AppendixJ_highfreq.R` | NA | Appendices — robustness checks: restricted to non-opinion articles (excludes Commentary/Editorial/Review types); re-derives scores separately per outlet (NYT/WP/WSJ); robustness to term frequency | No |
+| 7 | `AppendixF_newsonly.R`, `AppendixG_outlet_analysis.R`, `AppendixJ_highfreq.R` | Results from previous steps | Appendices — robustness checks: restricted to non-opinion articles (excludes Commentary/Editorial/Review types); re-derives scores separately per outlet (NYT/WP/WSJ); robustness to term frequency | No |
 
 Steps marked "Yes" read raw or near-raw article text and can only be executed inside a TDM Studio enclave by a researcher with their own ProQuest access.
 

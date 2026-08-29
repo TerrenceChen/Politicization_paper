@@ -1,5 +1,5 @@
 ########################################
-#File: makeBaldGelData.R
+#File: makeBaldGelData.R from Kozlowski and Murphy (2021)
 #Desc: as in Baldassarri and Gelman AJS paper using ANES, 
 #constructs data set of year-specific correlations
 #between item pairs nested within issue
@@ -222,7 +222,7 @@ domain_map <- rbind(
 
 # 2. Join the mapping to your results
 results_with_domains <- merge(results, domain_map, by = "issue", all.x = TRUE)
-saveRDS(results_with_domains, "results_with_domains.rds")
+saveRDS(results_with_domains, "input_files/results_with_domains.rds")
 
 ##########
 ##########      THE GAMM APPROACH
