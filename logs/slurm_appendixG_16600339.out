@@ -1,0 +1,201 @@
+conText v3.0.1 successfully loaded. Note this version of the package comes with significant changes to the conText() function.
+                        See Quick Start Guide for help getting started and instructions for accessing older versions of the package:
+ https://github.com/prodriguezsosa/conText/blob/master/vignettes/quickstart.md
+Package version: 4.3.1
+Unicode version: 15.1
+ICU version: 74.2
+Parallel computing: 2 of 2 threads used.
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Loading required package: Matrix
+
+Attaching package: 'Matrix'
+
+The following objects are masked from 'package:tidyr':
+
+    expand, pack, unpack
+
+Version:  1.39.5
+Date:     2025-12-21
+Author:   Philip Leifeld (University of Manchester)
+
+Consider submitting praise using the praise or praise_interactive functions.
+Please cite the JSS article in your publications -- see citation("texreg").
+
+Attaching package: 'texreg'
+
+The following object is masked from 'package:tidyr':
+
+    extract
+
+New York Times 33.3 %; The Washington Post 33.3 %; Wall Street Journal 33.3 %
+Building anchor embeddings for: New York Times
+Building anchor embeddings for: The Washington Post
+Building anchor embeddings for: Wall Street Journal
+Processed topic (all 3 outlets): 1
+Processed topic (all 3 outlets): 2
+Processed topic (all 3 outlets): 4
+Processed topic (all 3 outlets): 5
+Processed topic (all 3 outlets): 9
+Processed topic (all 3 outlets): 10
+Processed topic (all 3 outlets): 13
+Processed topic (all 3 outlets): 14
+Processed topic (all 3 outlets): 16
+Processed topic (all 3 outlets): 17
+Processed topic (all 3 outlets): 20
+Processed topic (all 3 outlets): 21
+Processed topic (all 3 outlets): 23
+Processed topic (all 3 outlets): 25
+Processed topic (all 3 outlets): 29
+Processed topic (all 3 outlets): 30
+Processed topic (all 3 outlets): 33
+Processed topic (all 3 outlets): 39
+Processed topic (all 3 outlets): 43
+Processed topic (all 3 outlets): 46
+Processed topic (all 3 outlets): 49
+Processed topic (all 3 outlets): 52
+Processed topic (all 3 outlets): 55
+Processed topic (all 3 outlets): 57
+Processed topic (all 3 outlets): 59
+Processed topic (all 3 outlets): 70
+Processed topic (all 3 outlets): 71
+Processed topic (all 3 outlets): 73
+Processed topic (all 3 outlets): 74
+Processed topic (all 3 outlets): 77
+Processed topic (all 3 outlets): 80
+Processed topic (all 3 outlets): 81
+Processed topic (all 3 outlets): 84
+Processed topic (all 3 outlets): 85
+Processed topic (all 3 outlets): 87
+Processed topic (all 3 outlets): 88
+Processed topic (all 3 outlets): 94
+Processed topic (all 3 outlets): 95
+Processed topic (all 3 outlets): 97
+Processed topic (all 3 outlets): 101
+Processed topic (all 3 outlets): 104
+Processed topic (all 3 outlets): 106
+Processed topic (all 3 outlets): 108
+Processed topic (all 3 outlets): 109
+Processed topic (all 3 outlets): 112
+Processed topic (all 3 outlets): 113
+Processed topic (all 3 outlets): 118
+Processed topic (all 3 outlets): 122
+Processed topic (all 3 outlets): 128
+Processed topic (all 3 outlets): 131
+Processed topic (all 3 outlets): 132
+Processed topic (all 3 outlets): 133
+Processed topic (all 3 outlets): 134
+Processed topic (all 3 outlets): 137
+Processed topic (all 3 outlets): 141
+Processed topic (all 3 outlets): 147
+Processed topic (all 3 outlets): 149
+Processed topic (all 3 outlets): 150
+Processed topic (all 3 outlets): 152
+Processed topic (all 3 outlets): 153
+Processed topic (all 3 outlets): 162
+Processed topic (all 3 outlets): 165
+Processed topic (all 3 outlets): 169
+Processed topic (all 3 outlets): 170
+Processed topic (all 3 outlets): 171
+Processed topic (all 3 outlets): 172
+Processed topic (all 3 outlets): 174
+Processed topic (all 3 outlets): 176
+Processed topic (all 3 outlets): 177
+Processed topic (all 3 outlets): 182
+Processed topic (all 3 outlets): 185
+Processed topic (all 3 outlets): 186
+Processed topic (all 3 outlets): 188
+Processed topic (all 3 outlets): 189
+Processed topic (all 3 outlets): 192
+Processed topic (all 3 outlets): 197
+Processed topic (all 3 outlets): 198
+Processed topic (all 3 outlets): 201
+Processed topic (all 3 outlets): 204
+Processed topic (all 3 outlets): 206
+Processed topic (all 3 outlets): 207
+Processed topic (all 3 outlets): 208
+Processed topic (all 3 outlets): 209
+Processed topic (all 3 outlets): 214
+Processed topic (all 3 outlets): 215
+Processed topic (all 3 outlets): 216
+Processed topic (all 3 outlets): 217
+Processed topic (all 3 outlets): 218
+Processed topic (all 3 outlets): 219
+Processed topic (all 3 outlets): 221
+Processed topic (all 3 outlets): 222
+Processed topic (all 3 outlets): 224
+Processed topic (all 3 outlets): 225
+Processed topic (all 3 outlets): 227
+Processed topic (all 3 outlets): 229
+Processed topic (all 3 outlets): 235
+Processed topic (all 3 outlets): 239
+Processed topic (all 3 outlets): 241
+Processed topic (all 3 outlets): 243
+Processed topic (all 3 outlets): 249
+Processed topic (all 3 outlets): 250
+Processed topic (all 3 outlets): 253
+Processed topic (all 3 outlets): 254
+Processed topic (all 3 outlets): 258
+Processed topic (all 3 outlets): 261
+Processed topic (all 3 outlets): 265
+Processed topic (all 3 outlets): 270
+Processed topic (all 3 outlets): 276
+Processed topic (all 3 outlets): 280
+Processed topic (all 3 outlets): 282
+Processed topic (all 3 outlets): 285
+Processed topic (all 3 outlets): 295
+Processed topic (all 3 outlets): 298
+Processed topic (all 3 outlets): 304
+Processed topic (all 3 outlets): 306
+Processed topic (all 3 outlets): 307
+Processed topic (all 3 outlets): 308
+Processed topic (all 3 outlets): 310
+Processed topic (all 3 outlets): 311
+Processed topic (all 3 outlets): 313
+Processed topic (all 3 outlets): 317
+Processed topic (all 3 outlets): 318
+Processed topic (all 3 outlets): 319
+Processed topic (all 3 outlets): 320
+Processed topic (all 3 outlets): 321
+Processed topic (all 3 outlets): 326
+Processed topic (all 3 outlets): 328
+Processed topic (all 3 outlets): 331
+Processed topic (all 3 outlets): 332
+Processed topic (all 3 outlets): 337
+Processed topic (all 3 outlets): 339
+Processed topic (all 3 outlets): 346
+Processed topic (all 3 outlets): 347
+Warning message:
+In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
+  Model failed to converge with max|grad| = 0.00279927 (tol = 0.002, component 1)
+Warning message:
+In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
+  Model failed to converge with max|grad| = 0.0226264 (tol = 0.002, component 1)
+The table was written to the file 'Tables/outlet_models_ideo.tex'.
+
+Warning message:
+In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
+  Model failed to converge with max|grad| = 0.00763059 (tol = 0.002, component 1)
+Warning message:
+In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
+  Model failed to converge with max|grad| = 0.0881617 (tol = 0.002, component 1)
+Warning message:
+In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
+  Model failed to converge with max|grad| = 0.00226964 (tol = 0.002, component 1)
+The table was written to the file 'Tables/outlet_models_party.tex'.
+
+`summarise()` has grouped output by 'Category'. You can override using the
+`.groups` argument.
+`summarise()` has grouped output by 'Category'. You can override using the
+`.groups` argument.
+AppendixG complete.

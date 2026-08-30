@@ -324,6 +324,27 @@ results_df_cat_combined %>%
 
 ggsave("Graphs/FigureF1_pol_trend_compare.png", width = 6.5, height =7)
 
+
+### Check slope changes
+
+overall_year <- results_df_cat_combined %>%
+  group_by(year, group, Corpus) %>%
+  summarise(value_avg = mean(pol_score, na.rm = TRUE), .groups = "drop")
+
+phase_slope <- function(df, y0, y1) {
+  d <- dplyr::filter(df, year >= y0, year <= y1)
+  unname(coef(lm(value_avg ~ year, data = d))["year"])
+}
+
+overall_year %>%
+  group_by(group, Corpus) %>%
+  group_modify(~ tibble(
+    slope_9404 = phase_slope(.x, 1994, 2004),
+    slope_0424 = phase_slope(.x, 2004, 2024)
+  )) %>%
+  ungroup()
+
+
 # --- Category-level early vs. late period (Figures 3/4 style) ---
 category_year <- results_df_cat_combined %>%
   group_by(year, Category, group, Corpus) %>%
@@ -376,6 +397,26 @@ category_period %>%
 
 ggsave("Graphs/FigureF3_politicization_party_newsonly.png", width =6.5, height = 7)
 
+# --- Check changes ---
+
+sig_flip_newsonly <- category_period %>%
+  mutate(
+    change      = late_value - early_value,
+    significant = late_lower > early_upper,
+    Corpus      = recode(Corpus, "All Articles" = "all", "News-Only" = "news")
+  ) %>%
+  select(Category, group, Corpus, change, significant) %>%
+  pivot_wider(names_from = Corpus, values_from = c(change, significant)) %>%
+  mutate(
+    flipped_to_ns   = significant_all & !significant_news,
+    flipped_to_sig  = !significant_all & significant_news,
+    pct_attenuation = round(100 * (1 - change_news / change_all), 1)
+  ) %>%
+  arrange(desc(flipped_to_ns), desc(pct_attenuation))
+
+sig_flip_newsonly %>% filter(flipped_to_ns | flipped_to_sig) %>%
+  select(Category, group, significant_all, significant_news, change_all, change_news, pct_attenuation)
+
 # --- Rank comparison ---
 compare_rank_order <- function(period_data, value_col, g) {
   ranked <- period_data %>%
@@ -397,6 +438,9 @@ compare_rank_order <- function(period_data, value_col, g) {
 
 rank_ideo_late  <- compare_rank_order(category_period, "late_value", "ideology")
 rank_party_late <- compare_rank_order(category_period, "late_value", "party")
+
+rank_ideo_late$table
+rank_party_late$table
 
 message("Ideology rank correlation (all vs news-only): ", round(rank_ideo_late$spearman_rho, 3))
 message("Party rank correlation (all vs news-only): ", round(rank_party_late$spearman_rho, 3))

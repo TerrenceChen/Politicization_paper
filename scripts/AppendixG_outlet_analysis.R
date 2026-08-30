@@ -1,12 +1,13 @@
-# AppendixG_outlet_analysis.R
+# AppendixG_outlet_analysis.R (speed-optimized, no parallelization)
 #
 # Per-outlet (NYT/WaPo/WSJ) politicization comparison
 #
+#
 # Requires:
-#   ALC_dems/anchors.rds                     
-#   ALC_dems/topic_<n>.rds                    
+#   ALC_dems/anchors.rds
+#   ALC_dems/topic_<n>.rds
 #   Results_Files/dict_terms_final_0825.rds
-#   freq_by_year_source.rds   
+#   freq_by_year_source.rds
 #   all_toks_ngram_0412.rds
 
 library(conText)
@@ -15,13 +16,11 @@ library(dplyr)
 library(ggplot2)
 library(stringr)
 library(tidyr)
-library(glue)
 library(lme4)
 library(texreg)
 
 anchor_dems <- readRDS("ALC_dems/anchors.rds")
 dict_terms  <- readRDS("Results_Files/dict_terms_final_0825.rds")
-
 
 # Subsamples by News outlet
 all_toks_final <- readRDS("all_toks_ngram_0412.rds")
@@ -39,53 +38,86 @@ outlet_tau <- sapply(outlet_subsample_sizes, sum)
 
 message(paste(outlets, round(100 * outlet_tau / 1350000, 1), "%", collapse = "; "))
 
+stopifnot(abs(sum(outlet_tau) - 1350000) < 100)  # sanity check: outlets should partition the corpus
 
-# ===================== All Articles by Outlet =====================
 
-subset_by_source_subsample <- function(term_data, source, year, n) {
-  idx <- which(term_data$docvars$Source == source &
-                 term_data$docvars$Year   == year   &
-                 term_data$docvars$subsample == n)
-  list(matrix = term_data$matrix[idx, , drop = FALSE])
+# ===================== Shared helpers =====================
+
+# Aggregate a matrix's rows to one embedding per year. Returns NULL if empty.
+group_by_year <- function(mat, years) {
+  if (nrow(mat) == 0) return(NULL)
+  ys  <- rowsum(mat, group = years)
+  cnt <- table(years)
+  sweep(ys, 1, as.numeric(cnt[rownames(ys)]), "/")
 }
 
-cosine_calculate <- function(topic, source){
-  
-  file_name <- paste0("ALC_dems/topic_", topic, ".rds")
-  topic_dem <- readRDS(file_name)
-  tau       <- outlet_tau[[source]]
-  sizes     <- outlet_subsample_sizes[[source]]
-  
-  results <- list()
-  
-  for (y in 1980:2024) {
-    for (term in names(topic_dem)) {
-      
-      row_out <- data.frame(term = term, year = y, subsample = 1:20,
-                            text_n = sizes,
-                            cos_lib = NA_real_, cos_con = NA_real_,
-                            cos_dem = NA_real_, cos_rep = NA_real_)
-      
-      for (n in 1:20) {
-        term_sub <- subset_by_source_subsample(topic_dem[[term]], source, y, n)
-        if (nrow(term_sub$matrix) == 0) next
-        
-        term_vec <- colMeans(term_sub$matrix)
-        
-        for (anchor in c("liberal", "conservative", "democrat", "republican")) {
-          anchor_sub <- subset_by_source_subsample(anchor_dems[[anchor]], source, y, n)
-          if (nrow(anchor_sub$matrix) == 0) next
-          anchor_vec <- colMeans(anchor_sub$matrix)
-          col <- switch(anchor, liberal = "cos_lib", conservative = "cos_con",
-                        democrat = "cos_dem", republican = "cos_rep")
-          row_out[[col]][n] <- as.numeric(lsa::cosine(anchor_vec, term_vec))
-        }
+# ===================== Step 1: build each anchor's per-year embedding,
+#                       once per (anchor, source, subsample) =====================
+
+build_outlet_anchor_wv <- function(anchor_name, source) {
+  ad      <- anchor_dems[[anchor_name]]
+  src_idx <- ad$docvars$Source == source
+  mat_src <- ad$matrix[src_idx, , drop = FALSE]
+  dv_src  <- ad$docvars[src_idx, ]
+  lapply(1:20, function(n) {
+    rows_n <- dv_src$subsample == n
+    group_by_year(mat_src[rows_n, , drop = FALSE], dv_src$Year[rows_n])
+  })
+}
+
+anchor_wv <- list()
+for (source in outlets) {
+  message("Building anchor embeddings for: ", source)
+  anchor_wv[[source]] <- list(
+    liberal      = build_outlet_anchor_wv("liberal", source),
+    conservative = build_outlet_anchor_wv("conservative", source),
+    democrat     = build_outlet_anchor_wv("democrat", source),
+    republican   = build_outlet_anchor_wv("republican", source)
+  )
+}
+
+# ===================== Step 2: per-term cosine computation, filtering by
+#                       Source once and splitting into subsamples/years efficiently =====================
+
+compute_term_outlet <- function(term, term_data, source, sizes,
+                                 lib_wv, con_wv, dem_wv, rep_wv) {
+
+  src_idx <- term_data$docvars$Source == source
+  mat_src <- term_data$matrix[src_idx, , drop = FALSE]
+  dv_src  <- term_data$docvars[src_idx, ]
+
+  years <- 1980:2024
+  rows  <- vector("list", 20)
+
+  for (n in 1:20) {
+    rows_n  <- dv_src$subsample == n
+    term_wv <- group_by_year(mat_src[rows_n, , drop = FALSE], dv_src$Year[rows_n])
+
+    row <- data.frame(term = term, year = years, subsample = n, text_n = sizes[n],
+                       cos_lib = NA_real_, cos_con = NA_real_,
+                       cos_dem = NA_real_, cos_rep = NA_real_)
+
+    if (!is.null(term_wv)) {
+      yrs_present <- intersect(rownames(term_wv), as.character(years))
+      lwv <- lib_wv[[n]]; cwv <- con_wv[[n]]; dwv <- dem_wv[[n]]; rwv <- rep_wv[[n]]
+
+      for (y in yrs_present) {
+        tv <- term_wv[y, ]
+        i  <- match(as.integer(y), years)
+
+        if (!is.null(lwv) && y %in% rownames(lwv)) row$cos_lib[i] <- as.numeric(lsa::cosine(lwv[y, ], tv))
+        if (!is.null(cwv) && y %in% rownames(cwv)) row$cos_con[i] <- as.numeric(lsa::cosine(cwv[y, ], tv))
+        if (!is.null(dwv) && y %in% rownames(dwv)) row$cos_dem[i] <- as.numeric(lsa::cosine(dwv[y, ], tv))
+        if (!is.null(rwv) && y %in% rownames(rwv)) row$cos_rep[i] <- as.numeric(lsa::cosine(rwv[y, ], tv))
       }
-      results[[length(results) + 1]] <- row_out
     }
+    rows[[n]] <- row
   }
-  
-  do.call(rbind, results) %>%
+  do.call(rbind, rows)
+}
+
+summarise_term_year <- function(df, tau) {
+  df %>%
     group_by(term, year) %>%
     mutate(
       cos_lib_avg = mean(cos_lib, na.rm = TRUE), cos_con_avg = mean(cos_con, na.rm = TRUE),
@@ -112,30 +144,54 @@ cosine_calculate <- function(topic, source){
     )
 }
 
+# ===================== Step 3: main loop -- topic outer, outlet inner,
+#                       each topic file read exactly once =====================
 
-nyt_cos <- lapply(unique(dict_terms$topic), cosine_calculate, source = "New York Times")
-nyt_cos_df <-  do.call(rbind, nyt_cos)
-saveRDS(nyt_cos_df, "Results_Files/nyt_cos_df.rds")
+topics_available <- unique(dict_terms$topic)
+topics_available <- topics_available[sapply(topics_available, function(tp)
+  file.exists(paste0("ALC_dems/topic_", tp, ".rds")))]
 
-wp_cos <- lapply(unique(dict_terms$topic), cosine_calculate, source = "The Washington Post")
-wp_cos_df <-  do.call(rbind, wp_cos)
-saveRDS(wp_cos_df, "Results_Files/wp_cos_df.rds")
+all_results <- vector("list", length(topics_available) * length(outlets))
+k <- 1
 
-wsj_cos <- lapply(unique(dict_terms$topic), cosine_calculate, source = "Wall Street Journal")
-wsj_cos_df <-  do.call(rbind, wsj_cos)
-saveRDS(wsj_cos_df, "Results_Files/wsj_cos_df.rds")
+for (topic in topics_available) {
 
-# ===================== Combine =====================
-nyt_cos_df$Source = "New York Times"
-wp_cos_df$Source = "The Washington Post"
-wsj_cos_df$Source = "Wall Street Journal"
+  topic_dem <- readRDS(paste0("ALC_dems/topic_", topic, ".rds"))
 
-all_df <- rbind(nyt_cos_df, wp_cos_df, wsj_cos_df) %>%
+  for (source in outlets) {
+
+    sizes <- outlet_subsample_sizes[[source]]
+    tau   <- outlet_tau[[source]]
+    lib_wv <- anchor_wv[[source]]$liberal;      con_wv <- anchor_wv[[source]]$conservative
+    dem_wv <- anchor_wv[[source]]$democrat;     rep_wv <- anchor_wv[[source]]$republican
+
+    term_rows <- lapply(names(topic_dem), function(term)
+      compute_term_outlet(term, topic_dem[[term]], source, sizes, lib_wv, con_wv, dem_wv, rep_wv))
+
+    df <- summarise_term_year(do.call(rbind, term_rows), tau)
+    df$Source <- source
+
+    all_results[[k]] <- df
+    k <- k + 1
+  }
+  message("Processed topic (all 3 outlets): ", topic)
+}
+
+cos_df <- do.call(rbind, all_results)
+
+# Save the per-outlet .rds outputs
+saveRDS(filter(cos_df, Source == "New York Times"),      "Results_Files/nyt_cos_df.rds")
+saveRDS(filter(cos_df, Source == "The Washington Post"),  "Results_Files/wp_cos_df.rds")
+saveRDS(filter(cos_df, Source == "Wall Street Journal"),  "Results_Files/wsj_cos_df.rds")
+
+# ===================== Combine & Plot =====================
+
+all_df <- cos_df %>%
             left_join(dict_terms, by = "term") %>%
             filter(!is.na(label))
 
-all_df_cat <-
-    all_df %>%
+assign_category <- function(df) {
+  df %>%
     mutate(Category = case_when(
       label %in% c("Abortion", "Gender", "LGBTQ", "Marriage", "Parenting") ~ "Gender and Family",
       label %in% c("Catholicism", "Religion") ~ "Religion",
@@ -175,9 +231,11 @@ all_df_cat <-
       label %in% c("Home", "Household", "Cooking") ~ "Home",
       label == "Space" ~ "Outer Space",
       TRUE ~ "Other"))
+}
 
 all_df_cat <-
-    all_df_cat %>%
+    all_df %>%
+    assign_category() %>%
     mutate(pol_score_ideo = (cos_lib + cos_con)/2,
            pol_score_party = (cos_dem + cos_rep)/2)
 
