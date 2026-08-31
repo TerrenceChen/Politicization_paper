@@ -146,8 +146,10 @@ combined_ideo <- combined %>%
   ungroup() %>%
   mutate(year0 = year - 1980)
 
-combined_ideo %>%
+LGBTQ_changes <-
+  combined_ideo %>%
   filter(label == "LGBTQ")
+write.csv(LGBTQ_changes, "Results_Files/LGBTQ_changes_p32.csv")
 
 slopes_pol <- combined_ideo %>%
   filter(!is.na(cosine_rebase)) %>%
