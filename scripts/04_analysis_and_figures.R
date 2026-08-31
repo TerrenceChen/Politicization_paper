@@ -723,16 +723,16 @@ lifestyle_label <-
     pull(label)
 
 top_terms <- 
-    dict_terms %>%
-    filter(label %in% lifestyle_label) %>%
-    group_by(label) %>%
-    slice_max(order_by = ratio , n=5) %>%
-    ungroup()
+  dict_terms %>%
+  filter(label %in% lifestyle_label) %>%
+  group_by(label) %>%
+  slice_max(order_by = ratio, n = 1) %>%
+  ungroup()
 
 results_df_cat %>%
- filter(term %in% top_terms$term) %>%
- mutate(label = ifelse(label == "Dining", "Casual Dining", label)) %>%
- group_by(label, group, Category) %>%
+  filter(term %in% top_terms$term) %>%
+  mutate(term_label = paste0(term, " (", label, ")")) %>%
+  group_by(term_label, group, Category) %>%
   summarise(
     late_value  = mean(pol_score[year >= 2015 & year <= 2024], na.rm = TRUE),
     early_value = mean(pol_score[year >= 1980 & year <= 1989], na.rm = TRUE),
@@ -744,17 +744,16 @@ results_df_cat %>%
   ungroup() %>%
   filter(group == "ideology") %>%
   mutate(diff = late_value - early_value) %>%
-  ggplot(aes(y = reorder(label, diff), shape = Category)) +
+  ggplot(aes(y = reorder(term_label, diff), shape = Category)) +
   geom_point(aes(x = late_value,  color = "2015-2024 Average")) +
   geom_errorbar(aes(xmin = late_lower, xmax = late_upper, color = "2015-2024 Average"), width = 0.3) +
   geom_point(aes(x = early_value, color = "1980-1989 Average")) +
   geom_errorbar(aes(xmin = early_lower, xmax = early_upper, color = "1980-1989 Average"), width = 0.3) +
   scale_color_manual(values = c("#FFC20A", "#0C7BDC")) +
   labs(x = "Politicization Score",
-       y = "Topic") +
+       y = "Term") +
   guides(shape = guide_legend(title = "Category"),
          color = guide_legend(title = "Period")) +
   theme_bw(base_size = 11)
 
-ggsave("Graphs/FigureH1_lifestyle_terms_top5.png", width = 6.5, height = 7)
-
+ggsave("Graphs/FigureH1_lifestyle_terms_unique.png", width = 6.5, height = 7)
